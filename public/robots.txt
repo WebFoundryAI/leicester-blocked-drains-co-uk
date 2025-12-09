@@ -17,5 +17,5 @@ Disallow: /admin/*
 Disallow: /login
 Disallow: /reset-password
 
-# Sitemap
-Sitemap: https://swindonblockeddrains.co.uk/sitemap.xml
+# Dynamic Sitemap (served by edge function)
+Sitemap: https://krxfvrxmriwzfwzorvzw.supabase.co/functions/v1/sitemap
