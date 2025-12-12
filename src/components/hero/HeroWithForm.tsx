@@ -16,7 +16,7 @@ export function HeroWithForm() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-                Expert Drain Unblocking in {BRAND.primaryLocation}
+                Blocked Drains Swindon
               </h1>
 
               <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-xl">

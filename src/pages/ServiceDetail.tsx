@@ -91,7 +91,7 @@ const ServiceDetail = () => {
 
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold mb-6">About {service.name}</h2>
+              <h2 className="text-2xl font-bold mb-6">Professional {service.name} Services in {BRAND.serviceAreaLabel}</h2>
 
               <AIContentBlock
                 type="service"
