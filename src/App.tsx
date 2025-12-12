@@ -1,9 +1,17 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+// Component to redirect to static sitemap.xml file
+const SitemapXmlRedirect = () => {
+  useEffect(() => {
+    window.location.href = "/sitemap.xml";
+  }, []);
+  return null;
+};
 import { ScrollToTop } from "./components/ScrollToTop";
 
 // Critical page - loaded immediately for first paint
@@ -68,6 +76,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/sitemap.xml" element={<SitemapXmlRedirect />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
