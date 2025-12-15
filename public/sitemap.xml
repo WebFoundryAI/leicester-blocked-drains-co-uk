@@ -662,4 +662,36 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/blog/how-to-prevent-blocked-drains/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/blog/signs-you-need-cctv-drain-survey/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/blog/emergency-drain-services-what-to-expect/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/blog/common-causes-blocked-toilets-swindon/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/blog/benefits-regular-drain-maintenance/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
