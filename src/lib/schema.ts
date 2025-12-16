@@ -148,9 +148,45 @@ export function generateLocalBusinessSchema(
       latitude: loc.latitude,
       longitude: loc.longitude,
     },
-    areaServed: {
-      "@type": "Place",
-      name: BRAND.serviceAreaLabel,
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Swindon",
+      },
+      {
+        "@type": "City",
+        name: "Royal Wootton Bassett",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Drainage Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Blocked Drains / Drain Unblocking",
+            description: "Professional drain unblocking services for homes and businesses",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "CCTV Drain Surveys",
+            description: "Professional CCTV inspections with detailed reports",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Emergency Drain Services",
+            description: "24/7 emergency drainage call-outs available",
+          },
+        },
+      ],
     },
     openingHoursSpecification: openingHoursSpecification.length > 0 
       ? openingHoursSpecification 
