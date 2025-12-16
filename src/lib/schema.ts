@@ -121,7 +121,7 @@ export function generateLocalBusinessSchema(
     name: BRAND.brandName,
     description: `Professional drainage services in ${loc.name} and ${BRAND.serviceAreaLabel}. 24/7 emergency drain unblocking, CCTV surveys, and repairs.`,
     url: `https://${BRAND.domain}`,
-    telephone: BRAND.phone,
+    telephone: `+44${BRAND.phone.replace(/^0/, '')}`,
     email: BRAND.email,
     logo: {
       "@type": "ImageObject",
@@ -184,6 +184,7 @@ export function generateLocalBusinessSchema(
             "@type": "Service",
             name: "Blocked Drains / Drain Unblocking",
             description: "Professional drain unblocking services for homes and businesses",
+            url: `https://${BRAND.domain}/services/blocked-drains`,
           },
         },
         {
@@ -192,6 +193,7 @@ export function generateLocalBusinessSchema(
             "@type": "Service",
             name: "CCTV Drain Surveys",
             description: "Professional CCTV inspections with detailed reports",
+            url: `https://${BRAND.domain}/services/cctv-drain-surveys`,
           },
         },
         {
@@ -200,6 +202,7 @@ export function generateLocalBusinessSchema(
             "@type": "Service",
             name: "Emergency Drain Services",
             description: "24/7 emergency drainage call-outs available",
+            url: `https://${BRAND.domain}/services/emergency-drain-services`,
           },
         },
       ],
