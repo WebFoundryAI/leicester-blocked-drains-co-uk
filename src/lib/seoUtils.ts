@@ -57,6 +57,78 @@ export interface RouteParams {
   slug?: string; // for blog posts
 }
 
+// Custom SEO for specific service pages
+const SERVICE_SEO: Record<string, { title: string; description: string }> = {
+  "blocked-drains": {
+    title: "Blocked Drains Swindon | 24/7 Drain Clearing",
+    description: "Fast blocked drain clearance in Swindon. Our local engineers use professional equipment to clear all blockages. No call-out fee, fixed prices. Call now.",
+  },
+  "drain-unblocking": {
+    title: "Drain Unblocking Swindon | Sinks, Toilets & Baths",
+    description: "Expert drain unblocking across Swindon. We clear blocked sinks, toilets, baths, and showers fast. No call-out charges, fixed pricing guaranteed.",
+  },
+  "cctv-drain-surveys": {
+    title: "CCTV Drain Surveys Swindon | HD Camera Inspections",
+    description: "Professional CCTV drain surveys in Swindon with detailed video reports. Identify blockages, damage, and root ingress accurately. Book your survey today.",
+  },
+  "drain-jetting": {
+    title: "Drain Jetting Swindon | High-Pressure Cleaning",
+    description: "Powerful high-pressure drain jetting in Swindon. Clears stubborn blockages, fat buildup, and debris. Safe for all pipe types. Book your service now.",
+  },
+  "emergency-drain-services": {
+    title: "Emergency Drains Swindon | 24/7 Callouts",
+    description: "24/7 emergency drain services across Swindon. Rapid response to flooding, sewage backups, and urgent blockages. Call us day or night.",
+  },
+};
+
+// Custom SEO for specific sub-service pages
+const SUBSERVICE_SEO: Record<string, { title: string; description: string }> = {
+  "blocked-toilet": {
+    title: "Blocked Toilet Swindon | Fast Unblocking Service",
+    description: "Blocked toilet in Swindon? We clear toilet blockages quickly and hygienically. Same-day service, no call-out fee. Domestic and commercial properties.",
+  },
+  "blocked-sink": {
+    title: "Blocked Sink Swindon | Fast Local Unblocking",
+    description: "Blocked sink in Swindon? Our local drainage experts clear kitchen and bathroom sinks fast. No call-out fee, fixed pricing. Call now for same-day service.",
+  },
+  "blocked-bath": {
+    title: "Blocked Bath & Shower Swindon | Drainage Experts",
+    description: "Bath or shower blocked in Swindon? We clear standing water and slow drains fast. Wet rooms and ensuites included. Fixed pricing, no hidden fees.",
+  },
+  "external-drain-unblocking": {
+    title: "External Drain Unblocking Swindon | Outside Drains",
+    description: "Blocked outside drain in Swindon? We clear external drains, gullies, and manholes professionally. Prevent flooding and odours. Book today.",
+  },
+  "internal-drain-unblocking": {
+    title: "Internal Drain Unblocking Swindon | Inside Drains",
+    description: "Internal drain problems in Swindon? We unblock drains throughout your property quickly. Minimal disruption, professional service guaranteed.",
+  },
+  "pre-purchase-survey": {
+    title: "Pre-Purchase Drain Survey Swindon | Homebuyers",
+    description: "Buying a home in Swindon? Get a CCTV drain survey before you commit. Reveals hidden problems, structural issues, and potential repair costs.",
+  },
+  "drainage-investigation": {
+    title: "Drainage Investigation Swindon | Problem Diagnosis",
+    description: "Recurring drain issues in Swindon? Our detailed investigations find the root cause using CCTV and professional expertise. Accurate diagnosis guaranteed.",
+  },
+  "domestic-jetting": {
+    title: "Domestic Drain Jetting Swindon | Home Services",
+    description: "High-pressure drain jetting for Swindon homes. Clears fat, grease, and root ingress safely. Professional equipment, no mess. Book your jetting today.",
+  },
+  "commercial-jetting": {
+    title: "Commercial Drain Jetting Swindon | Business Services",
+    description: "Industrial-strength drain jetting for Swindon businesses. Restaurants, offices, and retail properties. Minimise downtime with our fast service.",
+  },
+  "flooding-emergency": {
+    title: "Flooding Emergency Swindon | Rapid Response",
+    description: "Flooding emergency in Swindon? We respond fast to drain-related flooding. Pumping, clearance, and repairs. Available 24/7, call now for help.",
+  },
+  "sewage-emergency": {
+    title: "Sewage Emergency Swindon | Urgent Response",
+    description: "Sewage backup in Swindon? We handle sewage emergencies safely and hygienically. 24/7 urgent response. Protect your health, call immediately.",
+  },
+};
+
 // Central SEO generator based on route pattern and params
 export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta {
   const canonicalUrl = getCanonicalUrl(pathname);
@@ -65,8 +137,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Home page
   if (pathname === "/" || pathname === "") {
     return {
-      title: "Blocked Drains Swindon – 24/7 Local Drain Unblocking",
-      description: `Professional drain unblocking in ${BRAND.serviceAreaLabel}. Emergency call-outs, CCTV surveys, drain repairs. No call-out fee, fixed pricing. Covering Old Town, West Swindon, Wichelstowe & surrounding areas. Call ${PHONE_DISPLAY}`,
+      title: "Blocked Drains Swindon | 24/7 Local Drain Unblocking",
+      description: "Professional drain unblocking in Swindon. Emergency call-outs, CCTV surveys, drain repairs. No call-out fee, fixed pricing. Call 01793 487489.",
       canonicalUrl,
       noIndex,
       ogImage: `${BASE_URL}/og/swindonblockeddrains-og.jpg`,
@@ -76,8 +148,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Services listing
   if (pathname === "/services" || pathname === "/services/") {
     return {
-      title: `Drainage Services | ${BRAND.brandName}`,
-      description: `Complete drainage services in ${BRAND.serviceAreaLabel}. Blocked drains, CCTV surveys, drain jetting, and 24/7 emergency callouts. No call-out fee. Call ${PHONE_DISPLAY}`,
+      title: "Drainage Services Swindon | All Drain Solutions",
+      description: "Complete drainage services in Swindon. Blocked drains, CCTV surveys, drain jetting, and 24/7 emergency callouts. No call-out fee. Get a quote today.",
       canonicalUrl,
       noIndex,
     };
@@ -85,11 +157,20 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
 
   // Service detail: /services/:serviceSlug
   if (pathname.match(/^\/services\/[^\/]+\/?$/) && params.serviceSlug) {
+    const customSeo = SERVICE_SEO[params.serviceSlug];
+    if (customSeo) {
+      return {
+        title: customSeo.title,
+        description: customSeo.description,
+        canonicalUrl,
+        noIndex,
+      };
+    }
     const service = getServiceBySlug(params.serviceSlug);
     const serviceName = service?.name || slugToTitle(params.serviceSlug);
     return {
-      title: `${serviceName} | ${BRAND.brandName}`,
-      description: `${service?.description || `Professional ${serviceName.toLowerCase()} services.`} Available across ${BRAND.serviceAreaLabel}. Call ${PHONE_DISPLAY}`,
+      title: `${serviceName} Swindon | Professional Service`,
+      description: `${service?.description || `Professional ${serviceName.toLowerCase()} services in Swindon.`} Call ${PHONE_DISPLAY} for fast response.`,
       canonicalUrl,
       noIndex,
     };
@@ -97,33 +178,21 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
 
   // Sub-service detail: /services/:serviceSlug/:subServiceSlug
   if (pathname.match(/^\/services\/[^\/]+\/[^\/]+\/?$/) && params.serviceSlug && params.subServiceSlug) {
+    const customSeo = SUBSERVICE_SEO[params.subServiceSlug];
+    if (customSeo) {
+      return {
+        title: customSeo.title,
+        description: customSeo.description,
+        canonicalUrl,
+        noIndex,
+      };
+    }
     const service = getServiceBySlug(params.serviceSlug);
     const subService = getSubServiceBySlug(params.serviceSlug, params.subServiceSlug);
-    const serviceName = service?.name || slugToTitle(params.serviceSlug);
     const subServiceName = subService?.name || slugToTitle(params.subServiceSlug);
-
-    // Custom SEO for specific sub-services
-    if (params.subServiceSlug === "blocked-sink") {
-      return {
-        title: "Blocked Sink Swindon | Fast Local Unblocking",
-        description: "Blocked sink in Swindon? Our local drainage experts clear kitchen and bathroom sinks fast. No call-out fee, fixed pricing. Call now for same-day service.",
-        canonicalUrl,
-        noIndex,
-      };
-    }
-
-    if (params.subServiceSlug === "domestic-jetting") {
-      return {
-        title: "Domestic Drain Jetting Swindon | Stubborn Blockages Cleared",
-        description: "High-pressure drain jetting for Swindon homes. Clears fat, grease, and root ingress safely. Professional equipment, no mess. Book your jetting service today.",
-        canonicalUrl,
-        noIndex,
-      };
-    }
-
     return {
-      title: `${subServiceName} | ${serviceName} | ${BRAND.brandName}`,
-      description: `${subService?.description || `Professional ${subServiceName.toLowerCase()} services.`} Fast response, fixed pricing. Call ${PHONE_DISPLAY}`,
+      title: `${subServiceName} Swindon | Expert Service`,
+      description: `Professional ${subServiceName.toLowerCase()} in Swindon. Fast response, fixed pricing, no call-out fee. Call ${PHONE_DISPLAY}.`,
       canonicalUrl,
       noIndex,
     };
@@ -132,8 +201,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Locations listing
   if (pathname === "/locations" || pathname === "/locations/") {
     return {
-      title: `Areas We Cover | ${BRAND.brandName}`,
-      description: `${BRAND.brandName} provides expert drainage services throughout ${BRAND.serviceAreaLabel}. Find your local area for fast, professional drain unblocking. Call ${PHONE_DISPLAY}`,
+      title: "Areas We Cover | Drain Services Near Swindon",
+      description: "We provide drainage services across Swindon and surrounding areas including Highworth, Wroughton, Cricklade, and Royal Wootton Bassett. Find your area.",
       canonicalUrl,
       noIndex,
     };
@@ -143,10 +212,9 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   if (pathname.match(/^\/location\/[^\/]+\/?$/) && params.locationSlug) {
     const location = getLocationBySlug(params.locationSlug);
     const locationName = location?.name || slugToTitle(params.locationSlug);
-    const county = location?.countyOrRegion || "Wiltshire";
     return {
-      title: `Drain Services in ${locationName} | ${BRAND.brandName}`,
-      description: `Professional drainage services in ${locationName}, ${county}. 24/7 emergency drain unblocking, CCTV surveys, and repairs. Call ${PHONE_DISPLAY}`,
+      title: `Drain Services ${locationName} | Local Drainage Experts`,
+      description: `Professional drainage services in ${locationName}. 24/7 emergency drain unblocking, CCTV surveys, and repairs. No call-out fee. Call ${PHONE_DISPLAY}.`,
       canonicalUrl,
       noIndex,
     };
@@ -159,8 +227,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
     const locationName = location?.name || slugToTitle(params.locationSlug);
     const serviceName = service?.name || slugToTitle(params.serviceSlug);
     return {
-      title: `${serviceName} ${locationName} | ${BRAND.brandName}`,
-      description: `${serviceName} in ${locationName}. Fast response, fixed pricing, no call-out fee. Call ${PHONE_DISPLAY}`,
+      title: `${serviceName} ${locationName} | Local Service`,
+      description: `${serviceName} in ${locationName}, near Swindon. Fast response, fixed pricing, no call-out fee. Professional local service. Call ${PHONE_DISPLAY}.`,
       canonicalUrl,
       noIndex,
     };
@@ -169,14 +237,12 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Location + Service + SubService: /location/:locationSlug/:serviceSlug/:subServiceSlug
   if (pathname.match(/^\/location\/[^\/]+\/[^\/]+\/[^\/]+\/?$/) && params.locationSlug && params.serviceSlug && params.subServiceSlug) {
     const location = getLocationBySlug(params.locationSlug);
-    const service = getServiceBySlug(params.serviceSlug);
     const subService = getSubServiceBySlug(params.serviceSlug, params.subServiceSlug);
     const locationName = location?.name || slugToTitle(params.locationSlug);
-    const serviceName = service?.name || slugToTitle(params.serviceSlug);
     const subServiceName = subService?.name || slugToTitle(params.subServiceSlug);
     return {
-      title: `${subServiceName} in ${locationName} | ${serviceName}`,
-      description: `${subServiceName} help in ${locationName}. 24/7 emergency support, fixed pricing. Call ${PHONE_DISPLAY}`,
+      title: `${subServiceName} ${locationName} | Expert Help`,
+      description: `${subServiceName} services in ${locationName}, near Swindon. 24/7 availability, fixed pricing, no call-out fee. Call ${PHONE_DISPLAY}.`,
       canonicalUrl,
       noIndex,
     };
@@ -185,8 +251,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // About page
   if (pathname === "/about" || pathname === "/about/") {
     return {
-      title: `About Us | ${BRAND.brandName}`,
-      description: `Learn about ${BRAND.brandName}, your trusted drainage specialists in ${BRAND.serviceAreaLabel}. Reliable, professional, and available 24/7. Call ${PHONE_DISPLAY}`,
+      title: "About Us | Swindon Drainage Specialists",
+      description: "Meet Blocked Drains Swindon, your trusted local drainage experts. Reliable, professional service available 24/7 across Swindon and surrounding areas.",
       canonicalUrl,
       noIndex,
     };
@@ -195,8 +261,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Contact page
   if (pathname === "/contact" || pathname === "/contact/") {
     return {
-      title: `Contact Us | ${BRAND.brandName}`,
-      description: `Get in touch with ${BRAND.brandName} for drainage services in ${BRAND.serviceAreaLabel}. Call ${PHONE_DISPLAY} or use our contact form for a free quote.`,
+      title: "Contact Us | Get a Free Quote in Swindon",
+      description: "Contact Blocked Drains Swindon for a free quote. Call 01793 487489 or use our online form. Fast response for all drainage enquiries.",
       canonicalUrl,
       noIndex,
     };
@@ -205,8 +271,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // FAQ page
   if (pathname === "/faq" || pathname === "/faq/") {
     return {
-      title: `FAQs | ${BRAND.brandName}`,
-      description: `Common questions about drainage services in ${BRAND.serviceAreaLabel}. Find answers about blocked drains, costs, and emergency callouts.`,
+      title: "FAQs | Drain Services Questions Answered",
+      description: "Common questions about drainage services in Swindon answered. Learn about costs, response times, what's included, and when to call a professional.",
       canonicalUrl,
       noIndex,
     };
@@ -215,8 +281,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Blog listing
   if (pathname === "/blog" || pathname === "/blog/") {
     return {
-      title: `Drainage Tips & Advice | ${BRAND.brandName} Blog`,
-      description: `Expert drainage advice, tips, and guides from ${BRAND.brandName}. Learn how to prevent blocked drains and maintain your drainage system.`,
+      title: "Drainage Tips & Advice | Swindon Expert Blog",
+      description: "Expert drainage advice from Swindon specialists. Tips to prevent blocked drains, maintain your drainage system, and know when to call for help.",
       canonicalUrl,
       noIndex,
     };
@@ -227,8 +293,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
     // Blog posts get their SEO from database, this is a fallback
     const postTitle = slugToTitle(params.slug);
     return {
-      title: `${postTitle} | ${BRAND.brandName} Blog`,
-      description: `Read our article about ${postTitle.toLowerCase()}. Expert drainage advice from ${BRAND.brandName}.`,
+      title: `${postTitle} | Swindon Drainage Blog`,
+      description: `Read our article about ${postTitle.toLowerCase()}. Expert drainage advice from local Swindon specialists.`,
       canonicalUrl,
       noIndex,
     };
@@ -237,8 +303,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Sitemap page
   if (pathname === "/sitemap" || pathname === "/sitemap/") {
     return {
-      title: `Sitemap | ${BRAND.brandName}`,
-      description: `Complete sitemap for ${BRAND.brandName}. Browse all our drainage services, locations, and blog posts.`,
+      title: "Sitemap | Blocked Drains Swindon",
+      description: "Browse all pages on Blocked Drains Swindon. Find drainage services, local areas, blog articles, and contact information.",
       canonicalUrl,
       noIndex,
     };
@@ -247,8 +313,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Privacy policy
   if (pathname === "/privacy" || pathname === "/privacy/") {
     return {
-      title: `Privacy Policy | ${BRAND.brandName}`,
-      description: `Privacy policy for ${BRAND.brandName}. Learn how we collect, use, and protect your personal information.`,
+      title: "Privacy Policy | Blocked Drains Swindon",
+      description: "Privacy policy for Blocked Drains Swindon. Learn how we collect, use, and protect your personal information when using our services.",
       canonicalUrl,
       noIndex,
     };
@@ -257,8 +323,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Terms
   if (pathname === "/terms" || pathname === "/terms/") {
     return {
-      title: `Terms of Service | ${BRAND.brandName}`,
-      description: `Terms and conditions for using ${BRAND.brandName} drainage services.`,
+      title: "Terms of Service | Blocked Drains Swindon",
+      description: "Terms and conditions for Blocked Drains Swindon drainage services. Read before booking our drain unblocking and survey services.",
       canonicalUrl,
       noIndex,
     };
@@ -267,8 +333,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Cookies
   if (pathname === "/cookies" || pathname === "/cookies/") {
     return {
-      title: `Cookie Policy | ${BRAND.brandName}`,
-      description: `Cookie policy for ${BRAND.brandName}. Learn about the cookies we use on our website.`,
+      title: "Cookie Policy | Blocked Drains Swindon",
+      description: "Cookie policy for Blocked Drains Swindon website. Learn about the cookies we use and how to manage your preferences.",
       canonicalUrl,
       noIndex,
     };
