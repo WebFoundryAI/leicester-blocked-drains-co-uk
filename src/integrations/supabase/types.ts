@@ -101,6 +101,36 @@ export type Database = {
         }
         Relationships: []
       }
+      dismissed_health_issues: {
+        Row: {
+          created_at: string
+          dismissed_at: string
+          dismissed_by: string | null
+          id: string
+          issue_key: string
+          issue_title: string
+          reason: string | null
+        }
+        Insert: {
+          created_at?: string
+          dismissed_at?: string
+          dismissed_by?: string | null
+          id?: string
+          issue_key: string
+          issue_title: string
+          reason?: string | null
+        }
+        Update: {
+          created_at?: string
+          dismissed_at?: string
+          dismissed_by?: string | null
+          id?: string
+          issue_key?: string
+          issue_title?: string
+          reason?: string | null
+        }
+        Relationships: []
+      }
       leads: {
         Row: {
           created_at: string

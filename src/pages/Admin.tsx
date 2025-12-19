@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AIContentPolicyPanel } from "@/components/admin/AIContentPolicyPanel";
 import { QualityDashboard } from "@/components/admin/QualityDashboard";
+import { HealthIssueManager } from "@/components/admin/HealthIssueManager";
 import { FileText, Calendar, Settings, Download } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
@@ -70,6 +71,9 @@ const Admin = () => {
           blogPosts={blogPosts?.map((p) => ({ content: p.content, human_reviewed: p.human_reviewed, indexable: p.indexable })) || []}
         />
       )}
+      
+      {/* Health Issue Tracker */}
+      <HealthIssueManager />
       
       <div className="grid md:grid-cols-2 gap-6">
         {adminTools.map((tool) => {
