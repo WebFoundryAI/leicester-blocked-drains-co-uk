@@ -89,6 +89,7 @@ const BlogPost = () => {
       .map((paragraph) => {
         const formatted = paragraph
           .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:underline">$1</a>')
           .replace(/\n/g, "<br />");
         return `<p>${formatted}</p>`;
       })

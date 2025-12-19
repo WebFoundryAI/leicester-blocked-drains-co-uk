@@ -121,6 +121,14 @@ const SubServiceDetail = () => {
                 }
               />
 
+              <p className="text-muted-foreground mb-6">
+                As part of our comprehensive drainage solutions, this service is delivered by{" "}
+                <Link to="/" className="text-primary hover:underline">
+                  our blocked drains Swindon specialists
+                </Link>
+                . We cover the entire Swindon area with fast response times and fixed pricing.
+              </p>
+
               <h3 className="text-xl font-bold mt-10 mb-4">Why Choose Us?</h3>
               <ul className="space-y-3 mb-8">
                 {[

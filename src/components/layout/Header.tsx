@@ -14,7 +14,7 @@ export function Header() {
   };
 
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/", label: "Blocked Drains" },
     { href: "/services", label: "Services" },
     { href: "/locations", label: "Areas We Cover" },
   ];

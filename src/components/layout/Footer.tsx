@@ -51,11 +51,35 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services column - FIXED: /70 → /85 */}
+        {/* Services column - FIXED: /70 → /85 */}
           <div>
             <h4 className="font-semibold mb-4">Our Services</h4>
             <ul className="space-y-0 md:space-y-2 text-sm">
-              {SERVICES.map((service) => (
+              <li>
+                <Link
+                  to="/"
+                  className="text-background/85 hover:text-accent transition-colors block min-h-[48px] py-3 md:min-h-0 md:py-0 md:inline font-medium"
+                >
+                  Blocked Drains Swindon
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/blocked-drains/blocked-sink"
+                  className="text-background/85 hover:text-accent transition-colors block min-h-[48px] py-3 md:min-h-0 md:py-0 md:inline"
+                >
+                  Blocked Sinks
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/drain-jetting"
+                  className="text-background/85 hover:text-accent transition-colors block min-h-[48px] py-3 md:min-h-0 md:py-0 md:inline"
+                >
+                  Drain Jetting
+                </Link>
+              </li>
+              {SERVICES.filter(s => !['blocked-drains', 'drain-jetting'].includes(s.slug)).map((service) => (
                 <li key={service.slug}>
                   <Link
                     to={`/services/${service.slug}`}
