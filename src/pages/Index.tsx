@@ -4,21 +4,21 @@ import { HeroWithForm } from "@/components/hero/HeroWithForm";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { LocationsGrid } from "@/components/sections/LocationsGrid";
 import { TestimonialsSection, testimonials } from "@/components/sections/TestimonialsSection";
-import { FAQSection } from "@/components/sections/FAQSection";
+import { SwindonFAQSection, swindonFaqs } from "@/components/sections/SwindonFAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { TrustBadges } from "@/components/sections/TrustBadges";
 import { GuaranteesSection } from "@/components/sections/GuaranteesSection";
-import { AIContentBlock } from "@/components/ai/AIContentBlock";
+import { PillarContent } from "@/components/sections/PillarContent";
 import { SchemaScript } from "@/components/seo/SchemaScript";
 import { RouteSEOHead } from "@/components/seo/RouteSEOHead";
-import { BRAND } from "@/config/brand";
-import { PRIMARY_LOCATION, LOCATIONS } from "@/config/locations";
+import { LOCATIONS } from "@/config/locations";
 import { SERVICES } from "@/config/services";
 import {
   generateWebsiteSchema,
   generateLocalBusinessSchema,
   generateAggregateRatingSchema,
   generateReviewSchema,
+  generateFAQSchema,
 } from "@/lib/schema";
 import { MapPin, ArrowRight } from "lucide-react";
 
@@ -41,6 +41,7 @@ const Index = () => {
           generateLocalBusinessSchema(),
           generateAggregateRatingSchema(testimonials),
           ...generateReviewSchema(testimonials),
+          generateFAQSchema(swindonFaqs),
         ]}
       />
 
@@ -48,24 +49,8 @@ const Index = () => {
       
       <TrustBadges />
 
-      {/* AI-generated intro section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-wide px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <AIContentBlock
-              type="home"
-              keyParts={["intro"]}
-              templateName="homeIntro"
-              variables={{
-                brandName: BRAND.brandName,
-                primaryLocationName: PRIMARY_LOCATION.name,
-                serviceAreaLabel: BRAND.serviceAreaLabel,
-              }}
-              fallback={`${BRAND.brandName} provides professional drainage services across ${BRAND.serviceAreaLabel}. From emergency drain unblocking to CCTV surveys, our experienced team is available 24/7.`}
-            />
-          </div>
-        </div>
-      </section>
+      {/* Pillar content - expanded 1,000-1,500 word section with H2 structure */}
+      <PillarContent />
 
       {/* Below-fold content with content-visibility optimization */}
       <div className="content-visibility-auto">
@@ -118,7 +103,7 @@ const Index = () => {
         <GuaranteesSection />
       </div>
       <div className="content-visibility-auto">
-        <FAQSection />
+        <SwindonFAQSection />
       </div>
       <div className="content-visibility-auto">
         <CTASection />

@@ -65,8 +65,8 @@ export function getSeoMeta(pathname: string, params: RouteParams = {}): SEOMeta 
   // Home page
   if (pathname === "/" || pathname === "") {
     return {
-      title: "Blocked Drains Swindon | 24/7 Drain Unblocking & CCTV Surveys",
-      description: `Professional drain unblocking and CCTV surveys in ${BRAND.serviceAreaLabel}. 24/7 emergency service, no call-out fee, fixed pricing. Same-day service available. Call ${PHONE_DISPLAY}`,
+      title: "Blocked Drains Swindon – 24/7 Local Drain Unblocking",
+      description: `Professional drain unblocking in ${BRAND.serviceAreaLabel}. Emergency call-outs, CCTV surveys, drain repairs. No call-out fee, fixed pricing. Covering Old Town, West Swindon, Wichelstowe & surrounding areas. Call ${PHONE_DISPLAY}`,
       canonicalUrl,
       noIndex,
       ogImage: `${BASE_URL}/og/swindonblockeddrains-og.jpg`,
