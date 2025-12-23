@@ -145,17 +145,94 @@ Book Your Drain Unblocking Today
 
 Call: 01793 487489 or book online. Same-day bookings available. Most jobs done in under 60 minutes.`,
 
-  "service:cctv-drain-surveys": `CCTV Drain Surveys are an essential service provided by Blocked Drains Swindon, designed to identify and diagnose issues within your drainage system without the need for invasive digging or excavation. This advanced technology uses a high-resolution camera mounted on flexible rods that are inserted into your drains. This camera transmits live video footage back to a monitor, allowing our trained professionals to inspect the condition of the pipes in real-time.
+  "service:cctv-drain-surveys": `# CCTV Drain Surveys in Swindon – Drain Camera Inspections & Reports
 
-Understanding when a CCTV Drain Survey is needed can save you time, money, and unnecessary hassle. Common scenarios where this service is advisable include recurring blockages, slow drainage, foul odours, and unexplained damp spots in your home or garden. Additionally, if you are purchasing a new property, a CCTV survey can uncover potential drain issues that may not be visible during a standard inspection, thereby providing you with peace of mind and valuable information about the property's condition.
+Persistent blockages? Buying a property? We provide CCTV drain surveys in Swindon for homeowners, landlords, and commercial clients — with HD footage and clear reports.
 
-CCTV Drain Surveys are particularly effective in typical UK homes, where drainage systems can be complex due to older infrastructure and the varied soil conditions found across the country. When you book a CCTV Drain Survey with Blocked Drains Swindon, our engineers will arrive on-site equipped with the latest technology to assess your drainage system. The process begins with a thorough examination of your drain access points. The camera is carefully fed through the pipes, capturing real-time footage as it navigates bends and junctions. This enables the engineer to clearly see the interior of the pipes, identifying any blockages, cracks, or other deterioration in the system.
+---
 
-Following the inspection, we provide a comprehensive report that includes the footage captured during the survey, along with detailed findings and recommended actions. This allows you to understand the exact state of your drains and make informed decisions about necessary repairs or maintenance.
+## 📹 What Is a CCTV Drain Survey?
 
-Choosing Blocked Drains Swindon for your CCTV Drain Survey means relying on a service that prioritises thoroughness and accuracy. With our expertise in local drainage issues and a commitment to using state-of-the-art equipment, we offer a service that's both reliable and effective.
+We insert a small HD camera into your drainage system to inspect the condition of your pipework from the inside. It's fast, non-invasive, and ideal for:
 
-If you suspect that your drainage system is underperforming or you would like to assess the condition of your pipes, don't hesitate to get in touch. Our team is ready to assist you with a professional CCTV Drain Survey. Contact Blocked Drains Swindon today to schedule your appointment and ensure the long-term health of your drainage system.`,
+- Diagnosing repeated blockages  
+- Locating collapsed or cracked pipes  
+- Identifying root ingress, scale or joint failure  
+- Mapping drainage systems before extension or building work
+
+You'll receive a video file, condition report, and recommendations for next steps.
+
+[Book a drain survey now →](/contact)
+
+---
+
+## 💼 Who Needs a CCTV Survey?
+
+We carry out surveys for:
+
+- Homeowners with frequent blockages  
+- Buyers wanting pre-purchase reassurance  
+- Landlords and property managers  
+- Builders or architects before groundwork begins  
+- Insurance claims following sewer flooding or drain failure
+
+[Need a pre-purchase drain check? →](/services/cctv-drain-surveys/pre-purchase-survey)
+
+---
+
+## 💡 How It Works
+
+1. **Access Point Opened** – via inspection chamber or rodding eye  
+2. **Camera Inserted** – pushed through pipes to record interior  
+3. **Live Review** – we identify issues in real time and record footage  
+4. **Report Delivered** – with recommendations and video file
+
+We explain any findings on site and offer quotes for repairs if needed.
+
+---
+
+## 💸 Survey Pricing
+
+CCTV drain surveys in Swindon start from **£99 + VAT**, depending on:
+
+- Property size and access  
+- Number of drainage runs surveyed  
+- Whether a written report or insurer-grade format is needed
+
+[Get a custom quote →](/contact) or [See full pricing →](/pricing)
+
+---
+
+## 💬 CCTV Drain Survey FAQs
+
+**Do I need one before buying a house?**  
+Yes – many buyers discover costly drain issues post-purchase. A survey gives peace of mind.
+
+**Will you show me the footage?**  
+Yes. We walk you through what we find and provide a copy of the video.
+
+**Does it make a mess?**  
+No. It's a clean, external access process. No digging unless a repair is needed.
+
+**Can you repair damage found during the survey?**  
+Yes. We offer patch repairs, drain lining, and replacement quotes.
+
+---
+
+## 📍 Related Services
+
+- [Drain Unblocking Swindon →](/services/blocked-drains)  
+- [Drain Jetting →](/location/swindon/drain-jetting)  
+- [Emergency Drain Help →](/location/swindon/emergency-drain-services/flooding-emergency)
+
+---
+
+## 📞 Book a CCTV Drain Survey in Swindon
+
+**Call:** [01793 487489](tel:01793487489)  
+**Or [Book Online →](/contact)**
+
+Fast turnaround. Fully insured. Trusted by homeowners and building professionals.`,
 
   "service:drain-jetting": `Blocked Drains Swindon offers professional drain jetting services to help maintain the functionality of your drainage systems. Drain jetting is a highly effective method for clearing blockages and ensuring the free flow of water through your pipes. This service involves the use of high-pressure water jets which can dislodge and remove stubborn blockages caused by debris, grease, tree roots, and other obstructions commonly found in drainage systems.
 
