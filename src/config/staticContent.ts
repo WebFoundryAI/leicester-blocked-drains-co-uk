@@ -210,15 +210,116 @@ Once we have identified the issue, we employ various methods to clear the blocka
 
 If you're experiencing issues with a blocked bath, don't let it disrupt your daily routine. Contact Blocked Drains Swindon today for a swift and professional service. Our team is ready to restore your bath to perfect working order.`,
 
-  "subService:blocked-drains:blocked-sink": `Blocked Drains Swindon offers expert services for unblocking sinks in homes across Swindon and the surrounding areas. A blocked sink is one of the most common plumbing issues faced by homeowners, causing inconvenience and potential hygiene concerns. Whether it's your kitchen sink clogged with food debris and grease or your bathroom sink blocked with hair and soap residue, our team has the expertise to resolve the problem quickly and effectively.
+  "subService:blocked-drains:blocked-sink": `# Blocked Sink in Swindon? Fast, Affordable Sink Unblocking
 
-Blocked sinks typically manifest as slow drainage, standing water, or complete stoppage. You may also notice unpleasant odours rising from the drain or gurgling sounds when water is draining. In UK homes, kitchen sinks are particularly prone to blockages due to the accumulation of food particles, cooking oils, and grease that solidify in the pipes. Bathroom sinks often become blocked due to hair, soap scum, and toothpaste residue.
+Kitchen sink not draining? Bathroom basin overflowing? We unblock sinks across Swindon with no mess, no delay, and no inflated costs.
 
-Our approach to unblocking sinks begins with a careful assessment of the problem. We use professional-grade equipment to diagnose the cause and location of the blockage accurately. This may include the use of drain cameras to inspect the interior of the pipes, allowing us to identify the exact nature of the obstruction.
+---
 
-Once the blockage is identified, we employ the most appropriate method to clear it. This may involve high-pressure water jetting to blast away debris, mechanical rodding to break up solid blockages, or the use of specialised tools designed for sink drains. Our methods are effective yet gentle on your plumbing, ensuring no damage is caused during the process.
+## Common Sink Blockage Problems
 
-For reliable and efficient blocked sink services in Swindon, contact Blocked Drains Swindon today. Our professional team is ready to restore your sink to full working order, minimising disruption to your daily routine.`,
+Blocked sinks are one of the most common drainage issues we deal with in Swindon homes. Symptoms include:
+
+- Water draining slowly or not at all
+- Gurgling sounds or smells from the plughole
+- Overflow or water backing up into the sink
+
+Most clogs are caused by fat, food, hair, or soap scum building up inside your pipework. If left untreated, it can lead to full blockages and even pipe damage.
+
+---
+
+## How We Fix It
+
+Our engineers use mechanical tools or mini high-pressure jetting units to clear even the most stubborn sink blockages. We service:
+
+- Kitchen sinks
+- Bathroom basins
+- Utility sinks
+- Commercial sinks
+
+We unblock both internal pipework and external traps if needed.
+
+[Book a sink unblocking now →](/contact)
+
+---
+
+## Local Service Across Swindon
+
+We clear blocked sinks in:
+
+- Old Town
+- Wroughton
+- Stratton
+- Cheney Manor
+- Highworth
+- Royal Wootton Bassett
+
+You get:
+
+- Fast same-day callouts
+- Fixed prices with no hidden fees
+- Friendly, local engineers
+
+> "Cleared our blocked kitchen sink in under 30 minutes. Friendly team and very tidy."
+> – Rachel P., West Swindon
+
+[More reviews →](/reviews)
+
+---
+
+## What It Costs
+
+Sink unblocking starts from **£89 + VAT**. The exact price depends on location and severity.
+
+We don't charge extra for standard parts or minor work. You'll always get a quote before we start.
+
+[See full pricing →](/pricing)
+
+---
+
+## When a Sink Blockage Needs More
+
+If your sink keeps blocking or you smell something worse, we may recommend:
+
+- Drain jetting to clear deeper pipework
+- CCTV drain survey to check for pipe collapse or scale
+- Trap replacement or pipe repair
+
+[Learn about CCTV surveys →](/services/cctv-drain-surveys)
+[Drain jetting info →](/location/swindon/drain-jetting)
+
+---
+
+## Sink Unblocking FAQs
+
+**How long does it take to unblock a sink?**
+Most sink blockages are cleared in under 45 minutes.
+
+**Can I use a plunger or drain cleaner myself?**
+You can try, but DIY often pushes the blockage further. We clear it safely and properly.
+
+**Do you clean up afterwards?**
+Always. No mess left behind.
+
+**Do you guarantee the work?**
+Yes. All work comes with a guarantee.
+
+---
+
+## Related Services
+
+- [Emergency Drain Unblocking Swindon →](/location/swindon/emergency-drain-services/flooding-emergency)
+- [Drain Jetting Service →](/location/swindon/drain-jetting)
+- [Blocked Toilets & Bathrooms →](/location/cricklade/blocked-drains/blocked-bath)
+
+---
+
+## Call Now for Sink Unblocking in Swindon
+
+**Call:** [01793 487489](tel:01793487489)
+**Or [Book Online →](/contact)**
+
+Most blockages fixed on the first visit. Fast, clean, and guaranteed.`,
 
   "subService:blocked-drains:blocked-toilet": `Blocked Drains Swindon provides professional blocked toilet services across Swindon and the surrounding areas. A blocked toilet is not only inconvenient but can also pose hygiene risks and potential damage to your property if not addressed promptly. Our experienced team is equipped to handle all types of toilet blockages, from minor obstructions to more complex issues requiring specialist intervention.
 
