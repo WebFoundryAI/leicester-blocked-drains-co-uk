@@ -334,9 +334,9 @@ Stores blog articles:
 
 ### Location Pages
 
-- `/location/[locationSlug]` - Location detail page
-- `/location/[locationSlug]/[serviceSlug]` - Service in location page
-- `/location/[locationSlug]/[serviceSlug]/[subServiceSlug]` - Sub-service in location page
+- `/locations/[locationSlug]` - Location detail page
+- `/locations/[locationSlug]/[serviceSlug]` - Service in location page
+- `/locations/[locationSlug]/[serviceSlug]/[subServiceSlug]` - Sub-service in location page
 
 ### Blog Pages
 

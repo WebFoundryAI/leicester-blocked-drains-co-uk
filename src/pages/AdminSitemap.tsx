@@ -167,13 +167,13 @@ const AdminSitemap = () => {
 
       // Location pages
       for (const location of LOCATIONS) {
-        urls.push(generateUrlEntry(`/location/${location.slug}`, "0.8", "weekly", today));
+        urls.push(generateUrlEntry(`/locations/${location.slug}`, "0.8", "weekly", today));
 
         // Service-in-location pages
         for (const service of SERVICES) {
           urls.push(
             generateUrlEntry(
-              `/location/${location.slug}/${service.slug}`,
+              `/locations/${location.slug}/${service.slug}`,
               "0.7",
               "weekly",
               today
@@ -184,7 +184,7 @@ const AdminSitemap = () => {
           for (const sub of service.subServices || []) {
             urls.push(
               generateUrlEntry(
-                `/location/${location.slug}/${service.slug}/${sub.slug}`,
+                `/locations/${location.slug}/${service.slug}/${sub.slug}`,
                 "0.6",
                 "weekly",
                 today

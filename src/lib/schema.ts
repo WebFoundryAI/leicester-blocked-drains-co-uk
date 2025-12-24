@@ -548,7 +548,7 @@ export function generateLocationsListSchema(
       item: {
         "@type": "Place",
         name: location.name,
-        url: `https://${BRAND.domain}/location/${location.slug}`,
+        url: `https://${BRAND.domain}/locations/${location.slug}`,
       },
     })),
   };

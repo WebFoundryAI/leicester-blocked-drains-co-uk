@@ -107,7 +107,7 @@ const NotFound = () => {
                 {LOCATIONS.slice(0, 4).map((location) => (
                   <li key={location.slug}>
                     <Link
-                      to={`/location/${location.slug}`}
+                      to={`/locations/${location.slug}`}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       {location.name}

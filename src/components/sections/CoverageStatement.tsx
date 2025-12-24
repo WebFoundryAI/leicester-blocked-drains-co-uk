@@ -26,7 +26,7 @@ export function CoverageStatement({ currentLocation }: CoverageStatementProps) {
         {otherLocations.slice(0, 8).map((location) => (
           <Link
             key={location.slug}
-            to={`/location/${location.slug}`}
+            to={`/locations/${location.slug}`}
             className="text-xs bg-background px-3 py-1.5 rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             {location.name}

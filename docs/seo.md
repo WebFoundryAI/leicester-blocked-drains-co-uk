@@ -28,7 +28,7 @@ Key pages to check:
 - Services `/services/`
 - Blocked Drains `/services/blocked-drains/`
 - Locations `/locations/`
-- Swindon `/location/swindon/`
+- Swindon `/locations/swindon/`
 - Contact `/contact/`
 
 ### 4. Structured Data Verification
