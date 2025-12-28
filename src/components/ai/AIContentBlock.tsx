@@ -54,8 +54,29 @@ export function AIContentBlock({
     return null;
   }
 
-  // Split content into paragraphs and render
-  const paragraphs = content
+  // Clean markdown syntax and split into paragraphs
+  const cleanMarkdown = (text: string): string => {
+    return text
+      // Remove markdown headers (# ## ### etc.)
+      .replace(/^#{1,6}\s+/gm, '')
+      // Remove bold/italic markers but keep text
+      .replace(/\*\*\*(.*?)\*\*\*/g, '$1')
+      .replace(/\*\*(.*?)\*\*/g, '$1')
+      .replace(/\*(.*?)\*/g, '$1')
+      .replace(/__(.*?)__/g, '$1')
+      .replace(/_(.*?)_/g, '$1')
+      // Remove horizontal rules
+      .replace(/^[-*_]{3,}$/gm, '')
+      // Remove emoji markers that might appear at start of lines
+      .replace(/^[🚧🔧💧🏠📞✅❌⚠️🚿🛁🚽◆◇●○■□▪▫•]\s*/gm, '')
+      // Remove emojis anywhere in the text
+      .replace(/[🚧🔧💧🏠📞✅❌⚠️🚿🛁🚽◆◇●○■□▪▫•]/g, '')
+      // Clean up extra whitespace
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  };
+
+  const paragraphs = cleanMarkdown(content)
     .split(/\n\n+/)
     .filter((p) => p.trim())
     .map((p) => p.trim());
