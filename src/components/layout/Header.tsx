@@ -17,6 +17,9 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/locations", label: "Areas" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
+    { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
   ];
 

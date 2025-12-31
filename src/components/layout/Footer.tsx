@@ -123,6 +123,35 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            
+            {/* Altrincham sub-links for orphan page discovery */}
+            <h5 className="font-medium text-sm mt-4 mb-2 text-background/90">Altrincham Services</h5>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <Link
+                  to="/locations/altrincham/blocked-drains"
+                  className="text-background/85 hover:text-accent transition-colors block min-h-[48px] py-2 md:min-h-0 md:py-0 md:inline"
+                >
+                  Blocked Drains Altrincham
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/locations/altrincham/cctv-drain-surveys"
+                  className="text-background/85 hover:text-accent transition-colors block min-h-[48px] py-2 md:min-h-0 md:py-0 md:inline"
+                >
+                  CCTV Surveys Altrincham
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/locations/altrincham/drain-jetting"
+                  className="text-background/85 hover:text-accent transition-colors block min-h-[48px] py-2 md:min-h-0 md:py-0 md:inline"
+                >
+                  Drain Jetting Altrincham
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Quick links column - FIXED: /70 → /85 */}
