@@ -66,8 +66,8 @@ Disallow: /status
 # Crawl-delay for polite bots
 Crawl-delay: 1
 
-# Sitemap location (dynamic edge function)
-Sitemap: https://cauiylskdhxyepitquwv.supabase.co/functions/v1/sitemap
+# Sitemap location
+Sitemap: https://manchesterblockeddrain.co.uk/sitemap.xml
 
 # Host preference (non-www HTTPS)
 Host: https://manchesterblockeddrain.co.uk
