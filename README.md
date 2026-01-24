@@ -1,6 +1,6 @@
 # Blocked Drains Lead Generation Template
 
-A professional, single-brand, local lead-generation website template built for the **Blocked Drains** niche in the UK. This is a resellable, fully-featured template designed for maximum SEO performance and easy customisation.
+A professional, single-brand, local lead-generation website template built for the **Blocked Drains** niche in the UK. This is a fully-featured static site template designed for maximum SEO performance and easy customisation.
 
 ## Overview
 
@@ -12,37 +12,26 @@ This template is **not multi-tenant**. It is designed for a single brand deploym
 
 ### Technology Stack
 
-- **React** with React Router for SPA navigation
+- **Astro** for static site generation
 - **TypeScript** for type safety
 - **TailwindCSS** for styling
-- **Lovable Cloud (Supabase)** for backend services
-- **Flexible AI content system** supporting multiple providers
 
 ---
 
 ## Features
 
-### 🎯 Core Features
+### Core Features
 
-- **AI-generated, cached content** - Unique content for every service and location page
 - **Multi-location system** - Support for multiple service areas with individual pages
 - **Service-in-location pages** - Core SEO pages (e.g., "Blocked Drains in Manchester")
 - **Sub-service pages** - Granular service pages (e.g., "Blocked Toilet in Manchester")
 - **Static Google-style maps** - Location maps with coverage areas
-- **Lead capture forms** - Integrated with Lovable Cloud database
-- **Blog system** - Dynamic blog with AI post generation
+- **Lead capture forms** - Contact forms for lead generation
 - **Full JSON-LD schema** - Structured data for rich search results
 - **Automatic sitemap** - XML sitemap with all pages including sub-services
 - **SEO metadata utilities** - Title and description helpers
 
-### 🛠️ Admin Features
-
-- **Content regeneration panel** - Manage AI-generated content cache
-- **Blog post generator** - AI-assisted blog creation
-- **Blog scheduler** - Plan and generate blog posts with topic categories
-- **Lead management** - View submitted leads in the database
-
-### 🚀 Performance & UX Features
+### Performance & UX Features
 
 - **Trust badges** - Configurable trust indicators (24/7, insured, local experts)
 - **Guarantees section** - Configurable service guarantees
@@ -51,7 +40,7 @@ This template is **not multi-tenant**. It is designed for a single brand deploym
 - **Coverage statements** - Dynamic area coverage blocks on location pages
 - **Popular links footer** - Auto-generated internal linking section
 
-### 📋 Legal & Compliance
+### Legal & Compliance
 
 - **Privacy Policy page** - Boilerplate privacy policy
 - **Terms of Service page** - Boilerplate terms
@@ -133,7 +122,7 @@ export const SERVICES: ServiceConfig[] = [
     name: "Blocked Drains",
     shortLabel: "Blocked drains cleared fast",
     description: "Professional drain unblocking...",
-    icon: "🚿",
+    icon: "wrench",
     subServices: [
       {
         slug: "blocked-toilet",
@@ -143,12 +132,6 @@ export const SERVICES: ServiceConfig[] = [
       },
       // Add more sub-services
     ],
-    semanticTags: {
-      problemType: ["blockage", "slow drainage"],
-      serviceType: ["emergency", "repair"],
-      propertyType: ["residential", "commercial"],
-      riskFactors: ["flooding", "water damage"],
-    },
   },
   // Add or modify services
 ];
@@ -187,130 +170,6 @@ export const GUARANTEES: Guarantee[] = [
 
 ---
 
-## Selecting AI Provider
-
-The template supports multiple AI providers. Only **one provider** is active at a time.
-
-### Edit `/src/config/aiProvider.ts`
-
-```typescript
-export const AI_PROVIDER: AIProvider = "lovable"; // Default
-```
-
-### Supported Providers
-
-| Provider   | API Key Required         | Notes                          |
-|------------|--------------------------|--------------------------------|
-| `lovable`  | No (built-in)            | Default, recommended           |
-| `openai`   | `OPENAI_API_KEY`         | GPT models                     |
-| `gemini`   | `GEMINI_API_KEY`         | Google Gemini                  |
-| `claude`   | `CLAUDE_API_KEY`         | Anthropic Claude               |
-| `mistral`  | `MISTRAL_API_KEY`        | Mistral AI                     |
-| `groq`     | `GROQ_API_KEY`           | Groq LLMs                      |
-
-### Setting API Keys
-
-If using a provider other than Lovable:
-
-1. Add the API key to your Lovable Cloud secrets
-2. The edge function will automatically use it
-
----
-
-## Generating Content
-
-### How It Works
-
-1. Pages auto-generate unique content on first visit
-2. Content is cached in the `ai_content` table
-3. Subsequent visits load from cache (fast)
-4. Cache can be cleared to regenerate content
-
-### Content Templates
-
-Templates are defined in `/src/config/aiPrompts.ts`:
-
-- `homeIntro` - Homepage introduction
-- `servicesOverview` - Services page intro
-- `genericService` - Individual service pages
-- `locationPage` - Location-specific pages
-- `serviceInLocation` - Service + location combo pages
-- `subService` - Sub-service pages
-- `subServiceInLocation` - Sub-service + location combo pages
-- `aboutPage` - About page content
-- `faqPage` - FAQ content
-- `blogPost` - Blog article generation
-
----
-
-## Admin Panel
-
-### Content Manager
-
-Navigate to:
-
-```
-/admin/content?token=drain-admin-2024
-```
-
-#### Features:
-
-- **View AI Content Cache** - See all cached content entries
-- **Delete Cache Entries** - Force regeneration on next visit
-- **Generate Blog Posts** - AI-assisted blog creation
-- **Manage Blog Posts** - View and delete blog posts
-
-### Blog Scheduler
-
-Navigate to:
-
-```
-/admin/blog-scheduler?token=drain-admin-2024
-```
-
-#### Features:
-
-- **Select topic category** - Choose from drainage, maintenance, seasonal topics
-- **Set word count** - Short (300), medium (500), or long (800) posts
-- **Target location** - Optionally focus on a specific service area
-- **AI topic suggestions** - Get AI-generated blog topic ideas
-- **One-click generation** - Generate full blog posts instantly
-
-### Changing the Admin Token
-
-Edit the `ADMIN_TOKEN` constant in the admin page files, or use an environment variable for production.
-
----
-
-## Database Tables
-
-The template uses three main tables:
-
-### `leads`
-
-Stores form submissions:
-
-- `name`, `phone`, `email`, `postcode`
-- `service`, `location`, `message`
-- `source_page`, `created_at`
-
-### `ai_content`
-
-Caches AI-generated content:
-
-- `key` - Unique identifier (e.g., `location:swindon`)
-- `content` - Generated text
-- `created_at`, `updated_at`
-
-### `blog_posts`
-
-Stores blog articles:
-
-- `slug`, `title`, `excerpt`, `content`
-- `created_at`, `updated_at`
-
----
-
 ## URL Structure
 
 ### Core Pages
@@ -321,7 +180,6 @@ Stores blog articles:
 - `/about` - About page
 - `/contact` - Contact page
 - `/faq` - FAQ page
-- `/blog` - Blog listing
 - `/privacy` - Privacy policy
 - `/terms` - Terms of service
 - `/cookies` - Cookie policy
@@ -338,27 +196,51 @@ Stores blog articles:
 - `/locations/[locationSlug]/[serviceSlug]` - Service in location page
 - `/locations/[locationSlug]/[serviceSlug]/[subServiceSlug]` - Sub-service in location page
 
-### Blog Pages
+---
 
-- `/blog/[slug]` - Individual blog post
+## Development
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
 
 ---
 
 ## Deployment
 
-### Using Lovable
+### Static Hosting
 
-1. Click **Publish** in the Lovable editor
-2. Choose your deployment options
-3. Point your domain to the Lovable deployment
+The site builds to static HTML/CSS/JS files in the `dist/` folder. Deploy to any static hosting provider:
+
+- Netlify
+- Vercel
+- Cloudflare Pages
+- GitHub Pages
+- Any web server
 
 ### Custom Domain
 
-1. Go to Project Settings → Domains
-2. Add your custom domain
-3. Configure DNS as instructed
-
-No additional hosting required - Lovable handles everything.
+Configure your DNS to point to your hosting provider and set up SSL.
 
 ---
 
@@ -367,27 +249,23 @@ No additional hosting required - Lovable handles everything.
 ```
 src/
 ├── components/
-│   ├── ai/              # AI content components
 │   ├── forms/           # Lead capture forms
 │   ├── hero/            # Hero sections
 │   ├── layout/          # Header, Footer, Layout
 │   ├── nav/             # Navigation, Breadcrumbs
 │   ├── sections/        # Page sections (Trust, Guarantees, etc.)
 │   ├── seo/             # Schema and SEO components
-│   └── ui/              # UI primitives (shadcn, CookieBanner, etc.)
+│   └── ui/              # UI primitives (CookieBanner, etc.)
 ├── config/
-│   ├── aiPrompts.ts     # AI content templates
-│   ├── aiProvider.ts    # AI provider configuration
 │   ├── brand.ts         # Brand configuration
 │   ├── locations.ts     # Service areas
 │   ├── maps.ts          # Map settings
 │   ├── seo.ts           # SEO metadata helpers
 │   ├── services.ts      # Services and sub-services
 │   └── trust.ts         # Trust badges and guarantees
-├── hooks/               # React hooks
+├── layouts/             # Astro layouts
 ├── lib/                 # Utility functions (schema, maps, etc.)
-├── pages/               # Page components
-└── integrations/        # Supabase client
+└── pages/               # Astro pages
 ```
 
 ---
@@ -395,7 +273,7 @@ src/
 ## SEO Features
 
 - **Dynamic meta titles and descriptions** per page
-- **JSON-LD schema** for LocalBusiness, Service, Place, FAQ, BlogPosting
+- **JSON-LD schema** for LocalBusiness, Service, Place, FAQ
 - **Opening hours schema** - Parsed from brand config
 - **Social links (sameAs)** - Included in LocalBusiness schema
 - **Breadcrumb schema** for navigation
@@ -404,7 +282,6 @@ src/
 - **Robots.txt** allowing all crawlers
 - **Internal linking** throughout all pages
 - **Semantic HTML** structure
-- **Semantic tags** for AI search engines (hidden metadata)
 
 ---
 
@@ -424,15 +301,11 @@ src/
 For support with this template:
 
 - Review the code comments
-- Check the Lovable documentation
-- Customise the configuration files as needed
+- Check the configuration files
+- See `REUSE.md` for rebranding guidance
 
 ---
 
 ## License
 
 This template is designed for resale. Each deployment should be treated as a separate instance for a single brand/client.
-
----
-
-Built with ❤️ using [Lovable](https://lovable.dev)
