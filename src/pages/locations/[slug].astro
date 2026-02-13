@@ -44,6 +44,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
 // Generate FAQ schema for location-specific FAQs
 const faqPageSchema = hubContent ? getFAQSchema(faqs) : undefined;
+
+// Google Maps Embed API key (set in hosting platform env vars)
+const googleMapsApiKey = import.meta.env.GOOGLE_MAPS_API_KEY;
 ---
 
 <BaseLayout title={title} description={description} canonical={`/locations/${location.slug}/`} schema={pageSchema}>
@@ -178,17 +181,23 @@ const faqPageSchema = hubContent ? getFAQSchema(faqs) : undefined;
           <div class="mb-12 mt-10">
             <h3 class="text-xl font-bold mb-4">Find Us in {location.name}</h3>
             <div class="rounded-lg overflow-hidden mb-3 border border-border">
-              <iframe
-                src={`https://www.google.com/maps?q=${location.latitude},${location.longitude}&z=14&output=embed`}
-                width="100%"
-                height="400"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title={`Map of ${location.name}, ${location.countyOrRegion || 'Greater Manchester'}`}
-                class="w-full"
-              ></iframe>
+              {googleMapsApiKey ? (
+                <iframe
+                  src={`https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${location.latitude},${location.longitude}&zoom=14`}
+                  width="100%"
+                  height="400"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title={`Map of ${location.name}, ${location.countyOrRegion || 'Greater Manchester'}`}
+                  class="w-full"
+                ></iframe>
+              ) : (
+                <div class="w-full h-[400px] bg-muted flex items-center justify-center rounded-lg">
+                  <p class="text-muted-foreground">Map unavailable</p>
+                </div>
+              )}
             </div>
             <p class="text-sm text-muted-foreground">
               Serving homes and businesses across {location.name} and surrounding areas.
