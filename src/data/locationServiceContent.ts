@@ -285,6 +285,158 @@ export const LOCATION_SERVICE_CONTENT: LocationServiceContentMap = {
       localTip: "Didsbury's Victorian drainage often includes original salt-glazed pipes. These can be repaired and relined rather than replaced, preserving heritage features."
     }
   },
+  altrincham: {
+    "blocked-drains": {
+      intro: "Altrincham's prestigious properties in Hale, Bowdon, and Hale Barns come with extensive grounds and mature gardens that create distinctive drainage challenges. Large Victorian and Edwardian houses often have complex drainage serving multiple outbuildings, while established trees and hedgerows contribute to root intrusion. Our Altrincham specialists bring the expertise needed for these high-value properties.",
+      commonProblems: ["Tree root intrusion from mature garden specimens", "Leaf and organic debris from large gardens", "Fat and grease buildup in large household kitchens", "Blocked drainage serving outbuildings and annexes", "Ageing clay pipes in period properties"],
+      process: "We approach Altrincham properties with the care their value demands. Our engineers assess the full drainage layout including outbuildings and extensions, then select clearing methods appropriate for the pipe material and blockage type.",
+      localTip: "Altrincham's large mature gardens in Hale and Bowdon are beautiful but pose a significant root intrusion risk — schedule annual CCTV inspections if you have large trees within 5 metres of drainage runs."
+    },
+    "drain-unblocking": {
+      intro: "When drains block in Altrincham's desirable Trafford neighbourhoods, our local teams respond promptly with the right equipment for every property type. From period homes on Stamford New Road to modern executive developments in Timperley, we clear blockages efficiently while respecting your property and grounds.",
+      commonProblems: ["Kitchen sink blockages from food waste", "Bathroom drain clogs in en-suite-heavy properties", "External gulley obstructions from garden debris", "Utility room and laundry drain blockages", "Shared drainage issues in converted properties"],
+      process: "Our Altrincham engineers arrive equipped for the area's predominantly large, well-appointed properties. We locate the blockage precisely, select the least disruptive clearing method, and restore full drainage flow.",
+      localTip: "Altrincham properties with gravel driveways should fit gulley guards to prevent stones entering surface water drains."
+    },
+    "cctv-drain-surveys": {
+      intro: "With Altrincham's premium property values, understanding your drainage condition is a smart investment. Our CCTV surveys provide detailed assessments for buyers, sellers, and homeowners in Hale, Bowdon, and Timperley, revealing the true condition of pipes beneath these sought-after properties.",
+      commonProblems: ["Pre-purchase surveys for high-value transactions", "Root ingress investigation in mature gardens", "Mapping complex drainage serving multiple buildings", "Condition assessment of period drainage features", "Insurance and renovation planning requirements"],
+      process: "We survey Altrincham properties thoroughly, documenting all drainage routes including connections to outbuildings and extensions. Reports are detailed and professional, suitable for property transactions and insurance purposes.",
+      localTip: "Buying in Altrincham's conservation areas? A pre-purchase CCTV drain survey can reveal hidden issues that could cost significantly more to fix after completion."
+    },
+    "drain-jetting": {
+      intro: "High-pressure jetting maintains Altrincham's period and modern drainage at peak performance. Our careful approach removes accumulated deposits from Victorian clay pipes in Bowdon and clears root masses from garden-heavy properties in Hale Barns, restoring optimal flow throughout your system.",
+      commonProblems: ["Root mass accumulation from garden trees", "Scale deposits from hard water supply", "Grease and fat buildup over time", "Silt and garden debris in surface water drains", "General maintenance for large drainage networks"],
+      process: "We adjust jetting pressure and nozzle selection to suit each pipe's material and age. Altrincham's older properties receive gentler treatment that effectively clears deposits without risking damage to original drainage.",
+      localTip: "Altrincham properties with large gardens should combine annual jetting with root inhibitor treatment to keep drainage clear year-round."
+    },
+    "emergency-drain-services": {
+      intro: "Drainage emergencies in Altrincham's high-value properties demand swift, professional response. Whether you're facing sewage backup in a Hale villa or flooding at a Bowdon family home, our emergency teams are available around the clock to protect your property from damage.",
+      commonProblems: ["Sewage backing up into cellars and ground floors", "Garden flooding from overwhelmed drainage", "Overflowing inspection chambers", "Drain collapse beneath driveways and patios", "Storm water overwhelming period drainage systems"],
+      process: "Emergency calls from Altrincham are prioritised and dispatched immediately. Our engineers understand the area's property values and act quickly to contain damage while implementing effective, lasting solutions.",
+      localTip: "Altrincham properties with cellars or lower ground floors should ensure non-return valves are fitted and serviced annually to prevent sewage backup during storms."
+    },
+    "drain-repairs": {
+      intro: "Repairing drainage beneath Altrincham's prestigious properties requires specialist care and quality workmanship. Our repair teams work with all property ages across the Trafford area, from restoring Victorian clay pipes in Bowdon to fixing modern systems in Timperley's newer developments.",
+      commonProblems: ["Root damage to clay pipe joints", "Cracked pipes beneath driveways and patios", "Displaced joints from ground movement", "Age-related deterioration of period drainage", "Damage from extension and renovation projects"],
+      process: "We investigate thoroughly and recommend repairs suited to your property's character. No-dig relining preserves mature gardens and landscaping, while excavation is reserved for severe damage requiring full replacement.",
+      localTip: "Altrincham's clay soil and mature tree cover cause seasonal ground movement — flexible repair solutions like pipe relining accommodate this better than rigid replacements."
+    }
+  },
+  oldham: {
+    "blocked-drains": {
+      intro: "Oldham's Pennine location brings distinctive drainage challenges, from the heavy rainfall that sweeps across Saddleworth Moor to the steep terrain of villages like Uppermill and Delph. Our Oldham blocked drain specialists understand how this hillside geography affects drainage systems across the borough, from stone cottages to converted mills.",
+      commonProblems: ["Storm debris washed into drains during heavy rainfall", "Root intrusion in rural and semi-rural properties", "Silt and sediment accumulation from hillside runoff", "Fat and grease buildup in domestic kitchens", "Debris in shared Victorian mill town drainage"],
+      process: "We factor in Oldham's terrain when assessing blockages. Hillside properties require different approaches than valley-floor homes, and our engineers carry equipment suited to every situation the Pennine geography presents.",
+      localTip: "Oldham properties in exposed Pennine locations like Saddleworth should clear external gullies before autumn to prevent storm debris causing blockages through winter."
+    },
+    "drain-unblocking": {
+      intro: "From the terraced streets of Chadderton to the stone-built villages of Saddleworth, Oldham's varied property types each present unique unblocking challenges. Our local engineers respond quickly across the borough, equipped to handle Victorian clay pipes and modern plastic systems alike.",
+      commonProblems: ["Kitchen waste blockages in terraced properties", "Bathroom drain clogs from hair and soap", "External drain blockages from leaf litter and debris", "Interceptor trap problems in older properties", "Shared drainage issues between neighbouring homes"],
+      process: "Our Oldham engineers carry comprehensive equipment for the area's mixed property stock. We diagnose the blockage type and location quickly, then apply the most effective clearing technique for your specific pipe material and configuration.",
+      localTip: "Oldham's terraced properties in Shaw and Royton often share rear drainage — coordinating maintenance with neighbours prevents recurring blockages."
+    },
+    "cctv-drain-surveys": {
+      intro: "Whether you're buying a stone cottage in Uppermill or investigating drainage problems at a Chadderton family home, our CCTV surveys reveal what's happening beneath the surface. This is particularly valuable in Oldham where Pennine weather conditions accelerate pipe deterioration.",
+      commonProblems: ["Storm damage assessment after heavy rainfall", "Root ingress from moorland vegetation", "Pipe condition surveys for property purchases", "Investigating recurring blockage causes", "Mapping drainage routes in converted mill buildings"],
+      process: "We survey Oldham properties systematically, recording pipe condition and identifying defects. Reports include annotated footage and prioritised recommendations, accounting for the area's specific environmental factors.",
+      localTip: "Oldham's Pennine properties experience freeze-thaw cycles that can crack pipes — a CCTV survey after harsh winters catches damage before it causes blockages."
+    },
+    "drain-jetting": {
+      intro: "High-pressure jetting is essential maintenance for Oldham's drainage systems, which contend with Pennine rainfall, hillside silt, and hard water deposits. Our specialist equipment handles everything from clearing storm debris in Saddleworth to descaling Victorian pipes in Failsworth.",
+      commonProblems: ["Silt and sediment from hillside runoff", "Scale buildup from hard Pennine water", "Storm debris accumulation", "Root fragments after cutting treatment", "General preventative maintenance cleaning"],
+      process: "We select jetting equipment suited to Oldham's conditions — higher capacity for storm-deposited debris, careful pressure settings for older stone-channelled drainage. Flow is verified before completing the service.",
+      localTip: "Oldham properties at higher elevations experience more rainfall and faster silt buildup — consider jetting every 12 months rather than the usual 18."
+    },
+    "emergency-drain-services": {
+      intro: "Pennine weather can overwhelm drainage systems quickly, and Oldham properties need an emergency service that understands this reality. Our teams respond around the clock to flooding, sewage backup, and drain failures across the borough, from Lees to Greenfield and everywhere between.",
+      commonProblems: ["Storm water flooding overwhelming drainage capacity", "Sewage backing up during heavy rainfall events", "Hillside drain collapses after ground saturation", "Manhole overflows affecting multiple properties", "Foul water backing up through ground-floor fittings"],
+      process: "Emergency calls from Oldham trigger immediate dispatch. Our engineers arrive prepared for weather-related emergencies with pumping equipment and temporary drainage solutions to protect your property while permanent repairs are arranged.",
+      localTip: "Oldham hillside properties should keep sandbags or flood barriers readily available — Pennine storms can overwhelm local drainage faster than urban systems."
+    },
+    "drain-repairs": {
+      intro: "Oldham's drainage faces unique stresses from Pennine weather, steep terrain, and ageing mill town infrastructure. Our repair specialists work across the borough, from relining cracked pipes in Royton to excavating collapsed drains in Saddleworth, always using materials that withstand the local conditions.",
+      commonProblems: ["Freeze-thaw cracking in exposed pipes", "Ground movement damage on steep terrain", "Erosion around pipe joints from high water flow", "Root damage from moorland and garden vegetation", "Deterioration of original mill town drainage"],
+      process: "We assess Oldham drainage repairs with local conditions in mind. Materials and methods are chosen to withstand Pennine weather, with flexible solutions preferred on steep terrain where ground movement is ongoing.",
+      localTip: "Oldham properties in Saddleworth and the Pennine villages should use frost-resistant pipe materials for any exposed or shallow drainage repairs."
+    }
+  },
+  rochdale: {
+    "blocked-drains": {
+      intro: "Rochdale's mill town heritage and Pennine foothills location create a distinctive set of drainage challenges. From canal-side properties in Littleborough to the Victorian terraces of Castleton and Norden, our Rochdale blocked drain experts bring local knowledge and specialist equipment to clear any obstruction.",
+      commonProblems: ["Silt and debris from Pennine hillside drainage", "Root intrusion from canal-side vegetation", "Fat and grease buildup in domestic kitchens", "Stone and mortar debris in heritage drainage", "Shared drainage blockages in terraced housing"],
+      process: "Rochdale's varied property types and terrain demand flexible approaches. We assess each situation individually, considering property age, pipe material, and the area's specific environmental factors before selecting our clearing method.",
+      localTip: "Rochdale properties near the canal in Littleborough and Smithbridge should have drainage inspected regularly, as canal-side tree roots and water table levels affect pipe integrity."
+    },
+    "drain-unblocking": {
+      intro: "When Rochdale drains need unblocking, our local teams cover the entire borough from Heywood and Middleton to Milnrow and Wardle. We handle everything from simple kitchen sink blockages to complex shared drainage issues in the area's many Victorian terraced properties.",
+      commonProblems: ["Kitchen waste accumulation", "Bathroom drain blockages from hair and soap", "External gulley obstructions from fallen leaves", "Interceptor trap blockages in older properties", "Washing machine and utility drain problems"],
+      process: "Our Rochdale engineers arrive with comprehensive unblocking tools suited to the area's property mix. We identify the obstruction quickly and clear it completely, testing flow restoration before finishing the job.",
+      localTip: "Rochdale's terraced streets in Castleton and Sudden often share rear drainage — if neighbours are experiencing slow drains too, the blockage is likely in the shared section."
+    },
+    "cctv-drain-surveys": {
+      intro: "Understanding your Rochdale property's drainage is essential for effective maintenance. Our CCTV surveys provide detailed pipe condition assessments, particularly valuable for the area's mill conversions, canal-side homes, and period terraces where drainage history may be complex.",
+      commonProblems: ["Mapping drainage in converted mill buildings", "Canal-side property drainage assessment", "Pre-purchase surveys for period properties", "Root ingress from mature vegetation", "Investigating causes of recurring blockages"],
+      process: "We survey Rochdale drainage methodically, recording condition and mapping routes. This is especially important for converted buildings and canal-side properties where drainage layouts can be unconventional.",
+      localTip: "Buying a converted mill property in Rochdale? Always commission a full CCTV drain survey — industrial buildings often have complex, modified drainage that surface inspection cannot reveal."
+    },
+    "drain-jetting": {
+      intro: "High-pressure jetting effectively maintains Rochdale's varied drainage systems, from Victorian stone channels in heritage properties to modern plastic pipes in newer estates. Our specialist equipment clears the silt, scale, and debris that Pennine conditions deposit in local drainage.",
+      commonProblems: ["Pennine silt and sediment deposits", "Hard water scale accumulation", "Grease buildup in residential drains", "Root fragments requiring clearance", "Pre-survey cleaning for accurate assessment"],
+      process: "We match jetting equipment to Rochdale's pipe types and conditions. Heritage drainage receives careful, lower-pressure treatment, while modern systems can handle more aggressive cleaning for thorough results.",
+      localTip: "Rochdale's canal-side properties experience higher groundwater levels that can carry silt into drainage — regular jetting prevents gradual flow reduction."
+    },
+    "emergency-drain-services": {
+      intro: "Rochdale drainage emergencies receive rapid response from our local teams, whether you're dealing with flooding in Norden or sewage backup in Heywood. Our engineers are available around the clock, equipped to handle the weather-related emergencies that Pennine properties face during heavy rainfall.",
+      commonProblems: ["Surface water flooding during Pennine storms", "Sewage backing up into ground-floor rooms", "Manhole overflows on terraced streets", "Drain collapses after ground saturation", "Canal-related drainage emergencies"],
+      process: "Emergency calls from Rochdale receive immediate dispatch. We provide realistic arrival times and come prepared with pumping equipment and emergency repair materials to contain damage and resolve the situation.",
+      localTip: "Rochdale properties near Hollingworth Lake and the Rochdale Canal should maintain clear surface water drains year-round, as water table levels can rise rapidly after sustained rainfall."
+    },
+    "drain-repairs": {
+      intro: "Rochdale's drainage spans from original mill town stone channels to modern plastic systems, and our repair teams work confidently with all types. Whether it's relining Victorian pipes in Bamford or replacing collapsed sections in Middleton, we select repair methods suited to each property's age and construction.",
+      commonProblems: ["Cracked stone drainage channels", "Joint displacement from ground movement", "Root damage requiring pipe replacement", "Corrosion in older metal connections", "Storm damage to exposed drainage sections"],
+      process: "We investigate thoroughly before recommending Rochdale drainage repairs. Our approach accounts for the area's terrain and weather conditions, using durable materials that provide long-lasting results in Pennine environments.",
+      localTip: "Rochdale's mill conversions may have original industrial drainage that requires specialist knowledge — ensure your repair contractor has experience with heritage drainage systems."
+    }
+  },
+  sale: {
+    "blocked-drains": {
+      intro: "Sale's residential character and proximity to the Mersey floodplain create specific drainage considerations for homeowners. From the Victorian semis of Sale Moor to the modern developments in Brooklands, our Sale blocked drain specialists understand the flat terrain and water table challenges that affect local drainage systems.",
+      commonProblems: ["Fat and grease buildup from busy family kitchens", "Tree root intrusion from established street trees", "Surface water drainage issues on flat terrain", "Debris accumulation in period property drains", "Shared drainage blockages in semi-detached housing"],
+      process: "We assess Sale blockages with knowledge of the area's flat topography, which can slow drainage flow and allow deposits to accumulate more quickly. Our clearing methods restore full flow capacity and address the underlying causes.",
+      localTip: "Sale's flat terrain means drainage relies entirely on pipe gradient rather than gravity — even minor blockages can cause slow drainage, so address issues early before they worsen."
+    },
+    "drain-unblocking": {
+      intro: "When Sale drains need unblocking, our local teams respond quickly across the area from Ashton upon Mersey to Brooklands. We handle the full range of domestic drainage issues that Sale's family-oriented housing stock experiences, from kitchen waste blockages to external gulley problems.",
+      commonProblems: ["Kitchen sink blockages from cooking waste", "Bathroom drain clogs from hair and soap", "External gulley obstructions from garden debris", "Downpipe connection blockages", "Utility and laundry room drainage issues"],
+      process: "Our Sale engineers arrive with equipment suited to the area's predominantly residential properties. We locate and clear blockages efficiently, providing advice on prevention to help you avoid future call-outs.",
+      localTip: "Sale properties with flat rear gardens should ensure gulley grates are kept clear of leaves and debris, as the flat terrain means water won't naturally bypass a blocked grate."
+    },
+    "cctv-drain-surveys": {
+      intro: "Sale's active property market makes drainage condition a key consideration for buyers and sellers. Our CCTV surveys provide the detailed assessment needed for property transactions, as well as helping long-term homeowners understand and maintain their drainage systems effectively.",
+      commonProblems: ["Pre-purchase drainage assessment", "Investigating persistent slow drainage", "Root ingress from street and garden trees", "Mapping drainage routes before extensions", "Condition surveys for insurance purposes"],
+      process: "We survey Sale properties thoroughly, with particular attention to pipe gradients given the area's flat terrain. Reports highlight any areas where inadequate fall may be contributing to drainage problems.",
+      localTip: "Planning an extension on your Sale property? Commission a CCTV survey first — the Mersey floodplain's high water table means drainage diversions need careful planning."
+    },
+    "drain-jetting": {
+      intro: "Regular jetting is particularly important for Sale properties, where the flat terrain and proximity to the Mersey floodplain mean drainage systems work harder to maintain flow. Our high-pressure cleaning removes the deposits that accumulate more readily in low-gradient pipes.",
+      commonProblems: ["Silt deposits from low-gradient drainage", "Fat and grease accumulation", "Scale buildup from water supply", "Root fragments after treatment", "Preventative maintenance for optimal flow"],
+      process: "We pay special attention to pipe gradients when jetting Sale properties. Flat terrain requires thorough cleaning at key points where flow naturally slows, ensuring the entire system drains efficiently.",
+      localTip: "Sale's low-lying properties near the Water Park and Mersey should schedule jetting more frequently than average — flat drainage accumulates deposits faster."
+    },
+    "emergency-drain-services": {
+      intro: "Drainage emergencies in Sale receive rapid response from our local teams, day and night. The area's proximity to the Mersey floodplain means we're experienced with water-related emergencies and arrive prepared with pumping equipment and containment measures.",
+      commonProblems: ["Surface water flooding during heavy rainfall", "Sewage backing up through ground-floor fittings", "Garden flooding from overwhelmed surface drainage", "Manhole overflows affecting neighbouring properties", "Rising water table causing drainage backup"],
+      process: "Emergency calls from Sale receive priority dispatch. Our engineers understand the area's flood risk profile and arrive equipped to manage water ingress while resolving the underlying drainage failure.",
+      localTip: "Sale properties in flood-risk zones near the Mersey should fit non-return valves on main drainage connections to prevent river-level rises forcing sewage back into properties."
+    },
+    "drain-repairs": {
+      intro: "Repairing drainage in Sale requires understanding the area's specific challenges — flat terrain, high water tables near the Mersey, and a mix of Victorian and modern property stock. Our repair specialists select methods and materials suited to these conditions, ensuring lasting results.",
+      commonProblems: ["Cracked pipes from ground settlement", "Root damage from mature street trees", "Joint displacement in clay pipe systems", "Low-gradient pipes requiring re-laying", "Waterlogged ground complicating excavation"],
+      process: "We assess Sale drainage repairs with the local water table and terrain in mind. Where excavation is needed, we manage groundwater appropriately, and all repairs account for the area's flat gradient requirements.",
+      localTip: "Sale's high water table near the Mersey can make traditional excavation repairs challenging — ask about no-dig relining options that avoid groundwater complications."
+    }
+  },
   chorlton: {
     "blocked-drains": {
       intro: "Chorlton's eclectic character extends to its drainage systems, with Victorian terraces, Edwardian semis, and converted properties all presenting unique challenges. Our Chorlton blocked drain specialists navigate this diversity daily, providing effective solutions whether you're on Beech Road or Hardy Lane.",
