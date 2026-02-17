@@ -3,6 +3,9 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  GETADDRESS_API_KEY = "Su2Db2K84Ue9dJWIMoaHFQ48761"
+
 # Security headers for all routes
 [[headers]]
   for = "/*"
