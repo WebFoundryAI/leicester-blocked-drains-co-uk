@@ -177,24 +177,19 @@ const {
 
         try {
           var cleanPC = postcode.replace(/\s/g, '');
-          var res = await fetch('https://api.getaddress.io/find/' + encodeURIComponent(cleanPC) + '?api-key=Su2Db2K84Ue9dJWIMoaHFQ48761&expand=true');
+          var res = await fetch('/api/postcode-lookup?postcode=' + encodeURIComponent(cleanPC));
           var data = await res.json();
 
           if (!res.ok || !Array.isArray(data.addresses) || !data.addresses.length) {
-            setFieldError('postcode', data.Message || 'No addresses found. Please type your address manually.');
+            setFieldError('postcode', data.error || 'No addresses found. Please type your address manually.');
             return;
           }
-
-          var fmtPC = cleanPC.length > 3
-            ? cleanPC.slice(0, -3).toUpperCase() + ' ' + cleanPC.slice(-3).toUpperCase()
-            : cleanPC.toUpperCase();
 
           if (addressSelect instanceof HTMLSelectElement) {
             addressSelect.innerHTML = '<option value="">Select an address</option>' +
               data.addresses.map(function (addr) {
-                var line = [addr.line_1, addr.line_2, addr.line_3, addr.town_or_city].filter(Boolean).join(', ') + ', ' + fmtPC;
-                var val = line.replace(/"/g, '&quot;');
-                return '<option value="' + val + '">' + line + '</option>';
+                var val = addr.line.replace(/"/g, '&quot;');
+                return '<option value="' + val + '">' + addr.line + '</option>';
               }).join('');
           }
           if (addressLookupWrap) addressLookupWrap.classList.remove('hidden');
