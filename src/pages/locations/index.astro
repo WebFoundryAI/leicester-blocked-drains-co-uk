@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroWithLeadForm from '../../components/HeroWithLeadForm.astro';
 import { BRAND } from '../../data/brand';
 import { LOCATIONS } from '../../data/locations';
 import { SERVICES } from '../../data/services';
@@ -28,17 +29,12 @@ const combinedPageSchema = [breadcrumbSchema, webPageSchema];
 ---
 
 <BaseLayout title={title} description={description} canonical="/locations/" image="/og/locations-og.jpg" schema={combinedPageSchema}>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-overlay py-16 md:py-20">
-      <div class="container-wide px-4 text-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Areas We Cover</h1>
-        <p class="text-lg text-white/80 max-w-3xl mx-auto">
-          Professional Drainage Services Across Manchester & Greater Manchester
-        </p>
-      </div>
-    </div>
-  </section>
+  <HeroWithLeadForm
+    title="Areas We Cover"
+    description="Professional drainage services across Manchester & Greater Manchester. Fast response, local engineers, 24/7 availability."
+    formId="locations-lead-form"
+    source="locations"
+  />
 
   <!-- Introduction -->
   <section class="section-padding">

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroWithLeadForm from '../../components/HeroWithLeadForm.astro';
 import { BRAND } from '../../data/brand';
 import { SERVICES } from '../../data/services';
 import { SERVICES_OVERVIEW } from '../../data/staticContent';
@@ -28,20 +29,12 @@ const combinedPageSchema = [breadcrumbSchema, webPageSchema];
 ---
 
 <BaseLayout title={title} description={description} canonical="/services/" schema={combinedPageSchema}>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-overlay py-16 md:py-20">
-      <div class="container-wide px-4 text-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-          Our Drainage Services
-        </h1>
-        <p class="text-lg text-white/80 max-w-2xl mx-auto">
-          From blocked drains to CCTV surveys, we provide comprehensive
-          drainage solutions across {BRAND.serviceAreaLabel}.
-        </p>
-      </div>
-    </div>
-  </section>
+  <HeroWithLeadForm
+    title="Our Drainage Services"
+    description={`From blocked drains to CCTV surveys, we provide comprehensive drainage solutions across ${BRAND.serviceAreaLabel}.`}
+    formId="services-lead-form"
+    source="services"
+  />
 
   <!-- Overview -->
   <section class="section-padding bg-muted/30">
