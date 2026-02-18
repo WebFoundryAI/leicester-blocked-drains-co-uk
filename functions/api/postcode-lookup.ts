@@ -1,10 +1,8 @@
 // Cloudflare Pages Function – postcode lookup proxy
-// Uses Ideal Postcodes API (Royal Mail PAF licensed data)
-// Keeps API key server-side
+// Keeps getAddress.io API key server-side
 
-// Community test key – replace with your own key from https://ideal-postcodes.co.uk
-// Set IDEAL_POSTCODES_API_KEY in Cloudflare Pages dashboard (Settings > Environment variables)
-const FALLBACK_API_KEY = 'iddqd';
+// Fallback key used when the env var is not set in the Cloudflare Pages dashboard.
+const FALLBACK_API_KEY = 'Su2Db2K84Ue9dJWIMoaHFQ48761';
 
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_MAX = 10;
@@ -36,7 +34,7 @@ export const onRequestGet = async (context: any) => {
     memoryStore.set(ip, { count: entry.count + 1, start: entry.start });
   }
 
-  const apiKey = (context.env.IDEAL_POSTCODES_API_KEY as string | undefined) || FALLBACK_API_KEY;
+  const apiKey = (context.env.GETADDRESS_API_KEY as string | undefined) || FALLBACK_API_KEY;
   if (!apiKey) {
     return Response.json({ error: 'Postcode lookup is not configured.' }, { status: 500 });
   }
@@ -45,19 +43,23 @@ export const onRequestGet = async (context: any) => {
 
   try {
     const response = await fetch(
-      `https://api.ideal-postcodes.co.uk/v1/postcodes/${encodeURIComponent(cleanPostcode)}?api_key=${encodeURIComponent(apiKey)}`
+      `https://api.getAddress.io/find/${encodeURIComponent(cleanPostcode)}?api-key=${encodeURIComponent(apiKey)}&expand=true`
     );
     const payload = await response.json() as any;
 
-    if (!response.ok || !Array.isArray(payload.result) || !payload.result.length) {
+    if (!response.ok || !Array.isArray(payload.addresses) || !payload.addresses.length) {
       return Response.json({ error: 'No addresses found for this postcode.' }, { status: 404 });
     }
 
-    const addresses = payload.result.map((addr: any) => {
-      const line = [addr.line_1, addr.line_2, addr.line_3, addr.post_town, addr.postcode]
+    const formatted = cleanPostcode.length > 3
+      ? cleanPostcode.slice(0, -3).toUpperCase() + ' ' + cleanPostcode.slice(-3).toUpperCase()
+      : cleanPostcode.toUpperCase();
+
+    const addresses = payload.addresses.map((addr: any) => {
+      const line = [addr.line_1, addr.line_2, addr.line_3, addr.town_or_city]
         .filter(Boolean)
         .join(', ');
-      return { line };
+      return { line: `${line}, ${formatted}` };
     });
 
     return Response.json({ addresses });
