@@ -4,14 +4,16 @@ import HeroWithLeadForm from '../components/HeroWithLeadForm.astro';
 import { BRAND } from '../data/brand';
 import { SERVICES } from '../data/services';
 import { LOCATIONS } from '../data/locations';
-import { getHomepageSchema } from '../utils/schema';
+import { getCompleteHomepageSchema, getFAQSchema } from '../utils/schema';
 import { HOMEPAGE_FAQS } from '../data/faqs';
 
 const title = `Blocked Drains Manchester | 24/7 Emergency Unblocking`;
 const description = `Blocked drains in Manchester fixed fast. Local engineers, fixed pricing, and 24/7 emergency drainage response. Call ${BRAND.phoneFormatted} or request a quote online.`;
+const homepageFaqs = HOMEPAGE_FAQS.slice(0, 6);
+const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs)];
 ---
 
-<BaseLayout title={title} description={description} canonical="/" schema={getHomepageSchema()}>
+<BaseLayout title={title} description={description} canonical="/" schema={schema}>
   <HeroWithLeadForm
     title="Blocked Drains Manchester — fast fixes, fair pricing"
     description="Get same-day drainage support from experienced local engineers. We clear blocked sinks, toilets, and outside drains with no hidden extras."
@@ -80,7 +82,7 @@ const description = `Blocked drains in Manchester fixed fast. Local engineers, f
               {faq.question}
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0 ml-2 group-open:rotate-180 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
             </summary>
-            <div class="px-4 md:px-6 pb-4 md:pb-6 text-muted-foreground"><p>{faq.answer}</p></div>
+            <div class="px-4 md:px-6 pb-4 md:pb-6 text-muted-foreground" set:html={faq.answer}></div>
           </details>
         ))}
       </div>
