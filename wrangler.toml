@@ -15,14 +15,14 @@ workers_dev = false
 # Deployment route: applies this worker to all paths on the domain
 # Pattern: https://<domain>/*
 routes = [
-  { pattern = "blockeddrainssheffield.co.uk/*", zone_id = "" }  # Update with your Zone ID
+  { pattern = "blockeddrainssheffield.co.uk/*", zone_id = "318cef83dc18e079524943da7410f1b4" }
 ]
 
 # Environment: Development
 [env.development]
 vars = { ENVIRONMENT = "development" }
 routes = [
-  { pattern = "blockeddrainssheffield.co.uk/*", zone_id = "" }  # Update with your Zone ID
+  { pattern = "blockeddrainssheffield.co.uk/*", zone_id = "318cef83dc18e079524943da7410f1b4" }
 ]
 
 # Compatibility Date
