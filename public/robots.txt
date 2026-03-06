@@ -1,6 +1,6 @@
-# Blocked Drains Manchester - robots.txt
-# https://manchesterblockeddrain.co.uk
-# Last updated: 2026-02-12
+# Blocked Drains Sheffield - robots.txt
+# https://blockeddrainssheffield.co.uk
+# Last updated: 2026-03-05
 
 # ==============================================
 # AI CRAWLER POLICIES
@@ -44,7 +44,7 @@ Disallow: /status
 Disallow: /_astro/
 
 # Sitemap location
-Sitemap: https://manchesterblockeddrain.co.uk/sitemap.xml
+Sitemap: https://blockeddrainssheffield.co.uk/sitemap.xml
 
 # Host preference (canonical non-www HTTPS)
-Host: https://manchesterblockeddrain.co.uk
+Host: https://blockeddrainssheffield.co.uk

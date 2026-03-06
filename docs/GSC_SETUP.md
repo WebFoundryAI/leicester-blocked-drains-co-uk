@@ -5,7 +5,7 @@
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Click **Add property**
 3. Select **Domain** (recommended for full coverage)
-4. Enter: `manchesterblockeddrain.co.uk`
+4. Enter: `blockeddrainssheffield.co.uk`
 5. Click **Continue**
 
 ## Step 2: Verify Ownership via DNS TXT Record
@@ -64,15 +64,15 @@ Maintain the file: `/seo/keyword-map.csv`
 
 | Keyword | Target URL |
 |---------|-----------|
-| blocked drain manchester | / |
-| blocked drains manchester | / |
-| blocked drains in manchester | / |
-| drain blockage manchester | / |
+| blocked drain sheffield | / |
+| blocked drains sheffield | / |
+| blocked drains in sheffield | / |
+| drain blockage sheffield | / |
 | cctv drain survey cost | /services/cctv-drain-surveys |
 | cctv drainage survey cost | /services/cctv-drain-surveys |
 | drainage cctv survey cost | /services/cctv-drain-surveys |
-| blocked drains salford | /locations/salford/blocked-drains |
-| blocked drains stockport | /locations/stockport/blocked-drains |
+| blocked drains rotherham | /locations/rotherham/blocked-drains |
+| blocked drains doncaster | /locations/doncaster/blocked-drains |
 
 ## Troubleshooting
 
@@ -87,6 +87,6 @@ Maintain the file: `/seo/keyword-map.csv`
 - Ensure internal links point to the page
 
 ### Sitemap Errors
-- Verify sitemap.xml is accessible: https://manchesterblockeddrain.co.uk/sitemap.xml
+- Verify sitemap.xml is accessible: https://blockeddrainssheffield.co.uk/sitemap.xml
 - Check all URLs return 200 status
 - Ensure lastmod dates are valid ISO format

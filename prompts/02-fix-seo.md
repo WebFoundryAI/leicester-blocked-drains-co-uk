@@ -42,7 +42,7 @@ Based on the audit, implement the missing SEO elements:
    - Allow all crawlers
    - Point to sitemap location
 
-Reference implementation: /home/user/manchester_blocked_drain_co_uk
+Reference implementation: /home/user/blocked_drains_sheffield_co_uk
 Key files to reference:
 - /src/layouts/BaseLayout.astro (meta tags, schema injection)
 - /src/utils/schema.ts (schema generation functions)

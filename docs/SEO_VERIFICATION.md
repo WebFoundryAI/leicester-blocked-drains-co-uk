@@ -1,7 +1,7 @@
 # SEO Verification Checklist
 
 **Last Updated:** 2026-02-13
-**Canonical Host:** https://manchesterblockeddrain.co.uk (non-www, HTTPS)
+**Canonical Host:** https://blockeddrainssheffield.co.uk (non-www, HTTPS)
 
 ---
 
@@ -9,9 +9,9 @@
 
 ```bash
 # Must return HTTP 200
-curl -I https://manchesterblockeddrain.co.uk/robots.txt
-curl -I https://manchesterblockeddrain.co.uk/sitemap.xml
-curl -I https://manchesterblockeddrain.co.uk/llm.html
+curl -I https://blockeddrainssheffield.co.uk/robots.txt
+curl -I https://blockeddrainssheffield.co.uk/sitemap.xml
+curl -I https://blockeddrainssheffield.co.uk/llm.html
 ```
 
 ---
@@ -62,8 +62,8 @@ console.log('Twitter Title:', document.querySelector('meta[name="twitter:title"]
 | Meta description count | Exactly 1 |
 | Canonical count | Exactly 1 |
 | Title tag count | Exactly 1 |
-| Canonical format | `https://manchesterblockeddrain.co.uk/path` (no trailing slash except homepage) |
-| Homepage canonical | `https://manchesterblockeddrain.co.uk/` |
+| Canonical format | `https://blockeddrainssheffield.co.uk/path` (no trailing slash except homepage) |
+| Homepage canonical | `https://blockeddrainssheffield.co.uk/` |
 | Robots (public pages) | `index, follow, max-image-preview:large` |
 | Robots (admin/login) | `noindex, nofollow` |
 
@@ -77,8 +77,8 @@ console.log('Twitter Title:', document.querySelector('meta[name="twitter:title"]
 - [x] `/services/blocked-drains` - Service detail
 - [x] `/services/blocked-drains/blocked-toilet` - Sub-service
 - [x] `/locations` - All locations
-- [x] `/locations/manchester` - Location detail
-- [x] `/locations/manchester/blocked-drains` - Location + service
+- [x] `/locations/sheffield` - Location detail
+- [x] `/locations/sheffield/blocked-drains` - Location + service
 - [x] `/contact` - Contact page
 - [x] `/about` - About page
 - [x] `/faq` - FAQ page
@@ -96,10 +96,10 @@ console.log('Twitter Title:', document.querySelector('meta[name="twitter:title"]
 
 | Page Type | Canonical Format |
 |-----------|-----------------|
-| Homepage | `https://manchesterblockeddrain.co.uk/` |
-| All other pages | `https://manchesterblockeddrain.co.uk/path` (NO trailing slash) |
-| Service pages | `https://manchesterblockeddrain.co.uk/services/blocked-drains` |
-| Location pages | `https://manchesterblockeddrain.co.uk/locations/manchester` |
+| Homepage | `https://blockeddrainssheffield.co.uk/` |
+| All other pages | `https://blockeddrainssheffield.co.uk/path` (NO trailing slash) |
+| Service pages | `https://blockeddrainssheffield.co.uk/services/blocked-drains` |
+| Location pages | `https://blockeddrainssheffield.co.uk/locations/sheffield` |
 
 ---
 
@@ -107,15 +107,15 @@ console.log('Twitter Title:', document.querySelector('meta[name="twitter:title"]
 
 ```bash
 # Check sitemap is accessible
-curl -I https://manchesterblockeddrain.co.uk/sitemap.xml
+curl -I https://blockeddrainssheffield.co.uk/sitemap.xml
 
 # Validate sitemap content
-curl https://manchesterblockeddrain.co.uk/sitemap.xml | grep -c '<url>'
+curl https://blockeddrainssheffield.co.uk/sitemap.xml | grep -c '<url>'
 ```
 
 **Expected sitemap content:**
-- All `<loc>` URLs use `https://manchesterblockeddrain.co.uk`
-- Homepage has trailing slash: `https://manchesterblockeddrain.co.uk/`
+- All `<loc>` URLs use `https://blockeddrainssheffield.co.uk`
+- Homepage has trailing slash: `https://blockeddrainssheffield.co.uk/`
 - All other URLs have NO trailing slash
 - All entries have `<lastmod>`, `<changefreq>`, `<priority>`
 - No admin/login/reset-password routes included
@@ -125,13 +125,13 @@ curl https://manchesterblockeddrain.co.uk/sitemap.xml | grep -c '<url>'
 ## Robots.txt Verification
 
 ```bash
-curl https://manchesterblockeddrain.co.uk/robots.txt
+curl https://blockeddrainssheffield.co.uk/robots.txt
 ```
 
 **Expected content:**
 - `User-agent: *` → `Allow: /`
 - `Disallow: /admin`, `/login`, `/reset-password`, `/status`
-- `Sitemap: https://manchesterblockeddrain.co.uk/sitemap.xml`
+- `Sitemap: https://blockeddrainssheffield.co.uk/sitemap.xml`
 - AI bots (GPTBot, PerplexityBot, Claude-Web) → `Allow: /`
 - Training scrapers (CCBot, cohere-ai) → `Disallow: /`
 
@@ -154,11 +154,11 @@ Use [Google Rich Results Test](https://search.google.com/test/rich-results):
 ## Homepage Content Check
 
 The homepage (`/`) should include:
-- [x] Exactly 1 `<h1>` containing "Blocked Drains Manchester"
+- [x] Exactly 1 `<h1>` containing "Blocked Drains Sheffield"
 - [x] Multiple `<h2>` and `<h3>` sections
 - [x] 800-1500+ words of content (PillarContent component)
 - [x] Service list (drain unblocking, jetting, CCTV, repairs)
-- [x] Service area section (Greater Manchester + districts)
+- [x] Service area section (South Yorkshire + districts)
 - [x] 12 FAQ items with short answers
 - [x] Internal links to key service pages
 
@@ -190,7 +190,7 @@ Use [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly
 |------|--------|
 | `index.html` | Removed static `<title>` tag to prevent duplicates |
 | `src/App.tsx` | Fixed canonical normalizer to REMOVE trailing slashes (not add them) |
-| `src/components/sections/ManchesterFAQSection.tsx` | Expanded from 6 to 12 FAQs |
+| `src/components/sections/SheffieldFAQSection.tsx` | Expanded from 6 to 12 FAQs |
 | `public/robots.txt` | Configured with AI bot rules and correct disallows |
 | `public/sitemap.xml` | All URLs use no trailing slash except homepage |
 | `src/seo/routeMeta.ts` | Centralized SEO metadata for all routes |

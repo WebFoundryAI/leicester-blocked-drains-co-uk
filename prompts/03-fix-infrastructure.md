@@ -52,7 +52,7 @@ Implement the remaining infrastructure improvements:
    - Breadcrumbs on all pages linking back to parents
    - Related content sections where appropriate
 
-Reference implementation: /home/user/manchester_blocked_drain_co_uk
+Reference implementation: /home/user/blocked_drains_sheffield_co_uk
 Key files to reference:
 - /netlify.toml or /vercel.json (headers configuration)
 - /src/styles/global.css (CSS variables, mobile bar styles)
@@ -74,4 +74,4 @@ After implementation, check:
 
 ## Complete
 
-Site should now match the Manchester Blocked Drain reference implementation quality.
+Site should now match the Blocked Drains Sheffield reference implementation quality.

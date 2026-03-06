@@ -138,7 +138,7 @@ export const SERVICES: Service[] = [
     shortLabel: "Drain repair services",
     description: "Professional drain repair services including pipe repairs, relining, and replacement.",
     icon: "🔧",
-    ogImage: "/og/manchesterblockeddrains-og.jpg",
+    ogImage: "/og/blockeddrainssheffield-og.jpg",
     subServices: [
       {
         slug: "pipe-relining",

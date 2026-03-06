@@ -1,6 +1,6 @@
 # Phase 1: Site Quality Audit
 
-Use this prompt to audit a site against the Manchester Blocked Drain reference implementation.
+Use this prompt to audit a site against the Blocked Drains Sheffield reference implementation.
 
 ---
 

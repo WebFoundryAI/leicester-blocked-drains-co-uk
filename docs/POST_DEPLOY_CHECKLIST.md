@@ -53,13 +53,13 @@ console.log(`Total images: ${images.length}`);
 ## 4. Sitemap & Robots.txt
 
 ### Verify Accessibility
-- [x] https://manchesterblockeddrain.co.uk/sitemap.xml returns 200
-- [x] https://manchesterblockeddrain.co.uk/robots.txt returns 200
+- [x] https://blockeddrainssheffield.co.uk/sitemap.xml returns 200
+- [x] https://blockeddrainssheffield.co.uk/robots.txt returns 200
 
 ### Validate Sitemap
 ```bash
 # Use an online validator or:
-curl -I https://manchesterblockeddrain.co.uk/sitemap.xml
+curl -I https://blockeddrainssheffield.co.uk/sitemap.xml
 # Should return: Content-Type: application/xml
 ```
 
@@ -68,7 +68,7 @@ curl -I https://manchesterblockeddrain.co.uk/sitemap.xml
 - [x] Sitemap includes the homepage with priority 1.0
 
 ### Validate robots.txt
-- [x] Contains `Sitemap: https://manchesterblockeddrain.co.uk/sitemap.xml`
+- [x] Contains `Sitemap: https://blockeddrainssheffield.co.uk/sitemap.xml`
 - [x] Contains `Allow: /` for major crawlers
 - [x] Admin pages are disallowed
 
@@ -116,8 +116,8 @@ console.log('Canonical URL:', canonical?.href);
 - [x] Homepage (`/`)
 - [x] Services (`/services`)
 - [x] Service detail (`/services/blocked-drains`)
-- [x] Location (`/locations/manchester`)
-- [x] Location + service (`/locations/manchester/blocked-drains`)
+- [x] Location (`/locations/sheffield`)
+- [x] Location + service (`/locations/sheffield/blocked-drains`)
 - [x] About (`/about`)
 - [x] Contact (`/contact`)
 
@@ -140,7 +140,7 @@ httpRefs?.forEach(ref => console.warn(ref));
 
 ### Verify Ownership (if not already done)
 - [x] Go to https://search.google.com/search-console
-- [x] Add property: `manchesterblockeddrain.co.uk`
+- [x] Add property: `blockeddrainssheffield.co.uk`
 - [x] Complete verification (DNS TXT or HTML file)
 
 ### Submit Sitemap
@@ -157,16 +157,16 @@ httpRefs?.forEach(ref => console.warn(ref));
 
 ```bash
 # Test sitemap
-curl -s https://manchesterblockeddrain.co.uk/sitemap.xml | head -20
+curl -s https://blockeddrainssheffield.co.uk/sitemap.xml | head -20
 
 # Test robots.txt
-curl https://manchesterblockeddrain.co.uk/robots.txt
+curl https://blockeddrainssheffield.co.uk/robots.txt
 
 # Test homepage canonical
-curl -s https://manchesterblockeddrain.co.uk/ | grep -i 'rel="canonical"'
+curl -s https://blockeddrainssheffield.co.uk/ | grep -i 'rel="canonical"'
 
 # Test homepage title
-curl -s https://manchesterblockeddrain.co.uk/ | grep -i '<title>'
+curl -s https://blockeddrainssheffield.co.uk/ | grep -i '<title>'
 ```
 
 ## Files Created/Modified

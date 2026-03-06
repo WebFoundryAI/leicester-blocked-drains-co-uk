@@ -1,6 +1,6 @@
 # Pre-rendering Service Setup Guide
 
-This guide walks through setting up Prerender.io to serve fully-rendered HTML to search crawlers for manchesterblockeddrain.co.uk.
+This guide walks through setting up Prerender.io to serve fully-rendered HTML to search crawlers for blockeddrainssheffield.co.uk.
 
 ## Why Pre-rendering?
 
@@ -27,7 +27,7 @@ Already implemented and working:
 
 1. Go to https://prerender.io
 2. Create an account (free tier: 250 pages/month)
-3. Add site: `https://manchesterblockeddrain.co.uk`
+3. Add site: `https://blockeddrainssheffield.co.uk`
 4. Copy your **Prerender Token** from the dashboard
 
 ---
@@ -115,7 +115,7 @@ async function handleRequest(request) {
 
 In Cloudflare Dashboard:
 1. Go to your domain → Workers Routes
-2. Add route: `manchesterblockeddrain.co.uk/*`
+2. Add route: `blockeddrainssheffield.co.uk/*`
 3. Select your prerender worker
 4. Save
 
@@ -167,7 +167,7 @@ In Prerender.io Dashboard:
 
 ### 5a. Test with Prerender.io Tester
 1. Go to Prerender.io Dashboard → Tester
-2. Enter: `https://manchesterblockeddrain.co.uk/services/blocked-drains`
+2. Enter: `https://blockeddrainssheffield.co.uk/services/blocked-drains`
 3. Verify:
    - Full HTML content rendered
    - `<title>` tag present
@@ -179,13 +179,13 @@ In Prerender.io Dashboard:
 ```bash
 # Simulate Googlebot
 curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" \
-  -I https://manchesterblockeddrain.co.uk/services/blocked-drains
+  -I https://blockeddrainssheffield.co.uk/services/blocked-drains
 
 # Check if Prerender served the response (via headers)
-curl -A "Googlebot" https://manchesterblockeddrain.co.uk/ -D -
+curl -A "Googlebot" https://blockeddrainssheffield.co.uk/ -D -
 
 # View full prerendered HTML
-curl -A "Googlebot" https://manchesterblockeddrain.co.uk/services/blocked-drains
+curl -A "Googlebot" https://blockeddrainssheffield.co.uk/services/blocked-drains
 ```
 
 ### 5c. Google Search Console Verification
@@ -251,7 +251,7 @@ Current noindex pages (correct):
 ```bash
 curl -X POST https://api.prerender.io/recache \
   -H "Content-Type: application/json" \
-  -d '{"prerenderToken": "YOUR_TOKEN", "url": "https://manchesterblockeddrain.co.uk/page"}'
+  -d '{"prerenderToken": "YOUR_TOKEN", "url": "https://blockeddrainssheffield.co.uk/page"}'
 ```
 
 ### Issue: Canonical mismatch
