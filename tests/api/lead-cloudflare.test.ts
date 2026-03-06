@@ -47,7 +47,6 @@ const VALID_PAYLOAD = {
 
 describe('Cloudflare Lead API (D1)', () => {
   beforeEach(async () => {
-    vi.resetModules();
     // Clear rate limit state
     (globalThis as any).__leadRateLimit = undefined;
     const mod = await import('../../functions/api/lead');

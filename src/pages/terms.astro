@@ -12,11 +12,11 @@ const today = new Date().toLocaleDateString('en-GB');
 
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: "Home", url: "/" },
-  { name: "Terms of Service", url: "/terms" }
+  { name: "Terms of Service", url: "/terms/" }
 ]);
 ---
 
-<BaseLayout title={title} description={description} canonical="/terms" schema={breadcrumbSchema}>
+<BaseLayout title={title} description={description} canonical="/terms/" schema={breadcrumbSchema}>
   <section class="section-padding">
     <div class="container-narrow px-4">
       <h1 class="text-3xl md:text-4xl font-bold mb-6">Terms of Service</h1>

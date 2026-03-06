@@ -185,6 +185,13 @@ const {
         try {
           var cleanPC = postcode.replace(/\s/g, '');
           var res = await fetch('/api/postcode-lookup?postcode=' + encodeURIComponent(cleanPC));
+
+          var ct = (res.headers.get('content-type') || '');
+          if (!ct.includes('application/json')) {
+            setFieldError('postcode', 'Address lookup not available right now. Please type your address manually.');
+            return;
+          }
+
           var data = await res.json();
 
           if (!res.ok || !Array.isArray(data.addresses) || !data.addresses.length) {

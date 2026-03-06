@@ -56,6 +56,7 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
     {schema && <script type="application/ld+json" set:html={serializeSchema(schema)} />}
 
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     {BRAND.gscVerification && <meta name="google-site-verification" content={BRAND.gscVerification} />}
     <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" type="image/webp" media="(max-width: 767px)" />
     <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" media="(min-width: 768px)" />
@@ -178,7 +179,7 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
             <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-sm">Fully insured</span>
           </div>
           <p class="text-sm mt-4">
-            <a href="/privacy/" class="underline">Privacy</a> · <a href="/terms/" class="underline">Terms</a> · <a href="/cookies/" class="underline">Cookies</a>
+            <a href="/frequently-asked-questions/" class="underline">FAQ</a> · <a href="/sitemap/" class="underline">Sitemap</a> · <a href="/privacy/" class="underline">Privacy</a> · <a href="/terms/" class="underline">Terms</a> · <a href="/cookies/" class="underline">Cookies</a>
           </p>
         </div>
       </div>
@@ -187,7 +188,7 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
     <div class="fixed inset-x-0 bottom-0 z-[45] bg-white border-t border-border py-2 px-4 pb-[calc(0.5rem+env(safe-area-inset-bottom))] md:hidden">
       <div class="container-wide px-4 flex gap-2">
         <a class="btn-primary w-full no-underline" href={`tel:${BRAND.phone}`} aria-label="Call now">Call now</a>
-        <a class="btn-outline w-full no-underline" href="#quote-form" aria-label="Jump to quote form">Get quote</a>
+        <a class="btn-outline w-full no-underline" href="/contact/" aria-label="Get a free quote">Get quote</a>
       </div>
     </div>
 

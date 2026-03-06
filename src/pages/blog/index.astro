@@ -56,8 +56,7 @@ function formatDate(dateString: string): string {
 }
 ---
 
-<BaseLayout title={title} description={description} canonical="/blog/">
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<BaseLayout title={title} description={description} canonical="/blog/" schema={breadcrumbSchema}>
 
   <!-- Hero Section -->
   <section class="hero-section">

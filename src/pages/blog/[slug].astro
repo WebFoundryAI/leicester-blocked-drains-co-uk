@@ -2,9 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { BRAND } from '../../data/brand';
 import { BLOG_POSTS, getRecentPosts, type BlogPost } from '../../data/blog';
-import { getPublishedPosts, getPostBySlug, type CMSBlogPost } from '../../lib/blog-api';
+import { getPublishedPosts, type CMSBlogPost } from '../../lib/blog-api';
 import { serializeLexical, lexicalToPlainText } from '../../lib/lexical-html';
-import { getBreadcrumbSchema, getBlogArticleSchema, getBaseBusinessSchema, serializeSchema } from '../../utils/schema';
+import { getBreadcrumbSchema, getBlogArticleSchema, getBaseBusinessSchema } from '../../utils/schema';
 
 export async function getStaticPaths() {
   // Local posts
@@ -134,14 +134,13 @@ function formatContent(content: string): string {
   title={postMetaTitle}
   description={postMetaDescription}
   canonical={`/blog/${postSlug}/`}
-  schema={[businessSchema, articleSchema]}
+  schema={[businessSchema, articleSchema, breadcrumbSchema]}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <!-- Featured Image or Hero -->
   {featuredImage?.url ? (
     <section class="relative">
-      <img src={featuredImage.url} alt={featuredImage.alt} class="w-full h-64 md:h-96 object-cover" />
+      <img src={featuredImage.url} alt={featuredImage.alt || postTitle} class="w-full h-64 md:h-96 object-cover" width="1200" height="630" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
         <div class="container-narrow px-4 pb-8 text-white">
           <div class="flex items-center gap-2 mb-4">

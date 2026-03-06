@@ -350,8 +350,8 @@ describe('Schema Generation', () => {
       expect(schema['@type']).toBe('WebSite');
     });
 
-    it('includes SearchAction potentialAction', () => {
-      expect(schema.potentialAction['@type']).toBe('SearchAction');
+    it('does not include SearchAction (no search functionality)', () => {
+      expect(schema.potentialAction).toBeUndefined();
     });
   });
 

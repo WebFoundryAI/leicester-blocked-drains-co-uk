@@ -498,15 +498,7 @@ export function getWebSiteSchema() {
     "publisher": {
       "@id": `${siteUrl}/#organization`
     },
-    "inLanguage": "en-GB",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${siteUrl}/services?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
-    }
+    "inLanguage": "en-GB"
   };
 }
 

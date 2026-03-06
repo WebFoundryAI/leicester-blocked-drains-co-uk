@@ -53,6 +53,7 @@ function generateSitemapUrls(): SitemapUrl[] {
   urls.push({ loc: '/privacy/', priority: 0.3, changefreq: 'yearly', lastmod: getStaggeredDate(14) });
   urls.push({ loc: '/terms/', priority: 0.3, changefreq: 'yearly', lastmod: getStaggeredDate(14) });
   urls.push({ loc: '/cookies/', priority: 0.3, changefreq: 'yearly', lastmod: getStaggeredDate(14) });
+  urls.push({ loc: '/sitemap/', priority: 0.3, changefreq: 'monthly', lastmod: getStaggeredDate(7) });
 
   // Service pages
   for (const [i, service] of SERVICES.entries()) {
