@@ -4,10 +4,8 @@
 // Set IDEAL_POSTCODES_API_KEY in Cloudflare Pages dashboard:
 //   Settings > Environment variables
 //
-// The 'iddqd' community key works for real postcodes (15 lookups/day/IP).
-// For production, sign up at https://ideal-postcodes.co.uk (~2p per lookup).
+// Sign up at https://ideal-postcodes.co.uk (~2p per lookup) for a production key.
 
-const API_KEY = 'iddqd';
 const postcodeRegex = /^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i;
 
 export const onRequestGet = async (context: any) => {
@@ -18,7 +16,13 @@ export const onRequestGet = async (context: any) => {
     return Response.json({ error: 'Enter a valid UK postcode.' }, { status: 400 });
   }
 
-  const apiKey = (context.env?.IDEAL_POSTCODES_API_KEY as string | undefined) || API_KEY;
+  const apiKey = (context.env?.IDEAL_POSTCODES_API_KEY as string | undefined);
+  if (!apiKey) {
+    return Response.json(
+      { error: 'Address lookup is not configured. Please enter your address manually.' },
+      { status: 503 },
+    );
+  }
   const cleanPostcode = postcode.replace(/\s/g, '');
 
   try {
