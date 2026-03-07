@@ -13,8 +13,8 @@ export const BRAND = {
   emergencyAvailable: true,
 
   // Per-site tracking & verification — update these when cloning the template
-  ga4Id: "",
-  gscVerification: "",
+  ga4Id: "G-ZBN7YE9HZJ",
+  gscVerification: "google961cee0b68e77cd7",
 
   socialProfiles: [
     "https://www.facebook.com/BlockedDrainsSheffield",
