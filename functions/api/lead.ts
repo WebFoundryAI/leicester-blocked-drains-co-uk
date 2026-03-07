@@ -1,6 +1,15 @@
 // Cloudflare Pages Function – lead capture using D1 database
 
 export const onRequestPost = async (context: any) => {
+  // CSRF protection: verify request origin
+  const origin = context.request.headers.get('Origin');
+  const referer = context.request.headers.get('Referer');
+  const allowedOrigin = 'https://blockeddrainssheffield.co.uk';
+  const isValidOrigin = origin?.startsWith(allowedOrigin) || referer?.startsWith(allowedOrigin);
+  if (!isValidOrigin && origin !== null) {
+    return Response.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
   const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
   const RATE_LIMIT_MAX = 5;
 
