@@ -157,7 +157,7 @@ export function getSubServicePageSchema(service: Service, subService: SubService
     "@id": `${siteUrl}/services/${service.slug}/${subService.slug}/#service`,
     "name": subService.name,
     "description": subService.description,
-    "url": `${siteUrl}/services/${service.slug}/${subService.slug}`,
+    "url": `${siteUrl}/services/${service.slug}/${subService.slug}/`,
     "provider": {
       "@id": `${siteUrl}/#business`
     },

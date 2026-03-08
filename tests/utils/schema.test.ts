@@ -102,7 +102,7 @@ describe('Schema Generation', () => {
     });
 
     it('service URL matches /services/{slug} pattern', () => {
-      expect(result[1].url).toBe(`${siteUrl}/services/${service.slug}`);
+      expect(result[1].url).toBe(`${siteUrl}/services/${service.slug}/`);
     });
 
     it('includes sub-service offer catalog when service has subServices', () => {
@@ -129,13 +129,13 @@ describe('Schema Generation', () => {
     });
 
     it('URL includes both service and sub-service slugs', () => {
-      expect(result[1].url).toBe(`${siteUrl}/services/${service.slug}/${subService.slug}`);
+      expect(result[1].url).toBe(`${siteUrl}/services/${service.slug}/${subService.slug}/`);
     });
 
     it('includes isRelatedTo referencing parent service', () => {
       expect(result[1].isRelatedTo).toBeDefined();
       expect(result[1].isRelatedTo.name).toBe(service.name);
-      expect(result[1].isRelatedTo.url).toBe(`${siteUrl}/services/${service.slug}`);
+      expect(result[1].isRelatedTo.url).toBe(`${siteUrl}/services/${service.slug}/`);
     });
   });
 
@@ -181,7 +181,7 @@ describe('Schema Generation', () => {
     });
 
     it('URL matches /locations/{location}/{service} pattern', () => {
-      expect(result[1].url).toBe(`${siteUrl}/locations/${location.slug}/${service.slug}`);
+      expect(result[1].url).toBe(`${siteUrl}/locations/${location.slug}/${service.slug}/`);
     });
   });
 
