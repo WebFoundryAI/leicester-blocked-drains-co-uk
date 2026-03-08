@@ -7,7 +7,7 @@ import { getBreadcrumbSchema } from '../utils/schema';
 const title = `Terms of Service | ${BRAND.brandName} Conditions`;
 
 // SEO-optimized description (120-155 chars)
-const description = `Review the terms and conditions for ${BRAND.brandName} drainage services across ${BRAND.serviceAreaLabel}. Clear, fair terms for all our customers.`;
+const description = `Review the terms for ${BRAND.brandName} drainage services across ${BRAND.serviceAreaLabel}. Fair, transparent conditions. Call ${BRAND.phoneFormatted} for a quote.`;
 const today = new Date().toLocaleDateString('en-GB');
 
 const breadcrumbSchema = getBreadcrumbSchema([
@@ -88,6 +88,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
         <p>
           We may update these terms from time to time. The latest version
           will always be available on our website.
+        </p>
+        <p>
+          See also our <a href="/privacy/" class="text-primary hover:underline">privacy policy</a> and <a href="/cookies/" class="text-primary hover:underline">cookie policy</a>. To book a drainage service, visit our <a href="/contact/" class="text-primary hover:underline">contact page</a> or browse our <a href="/services/" class="text-primary hover:underline">full service list</a>.
         </p>
       </div>
     </div>

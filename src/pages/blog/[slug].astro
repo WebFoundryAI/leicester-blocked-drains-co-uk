@@ -140,7 +140,7 @@ function formatContent(content: string): string {
   <!-- Featured Image or Hero -->
   {featuredImage?.url ? (
     <section class="relative">
-      <img src={featuredImage.url} alt={featuredImage.alt || postTitle} class="w-full h-64 md:h-96 object-cover" width="1200" height="630" />
+      <img src={featuredImage.url} alt={featuredImage.alt || postTitle} class="w-full h-64 md:h-96 object-cover" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
         <div class="container-narrow px-4 pb-8 text-white">
           <div class="flex items-center gap-2 mb-4">

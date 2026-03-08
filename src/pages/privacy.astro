@@ -7,7 +7,7 @@ import { getBreadcrumbSchema } from '../utils/schema';
 const title = `Privacy Policy | ${BRAND.brandName} Data Protection`;
 
 // SEO-optimized description (120-155 chars)
-const description = `Read our privacy policy to learn how ${BRAND.brandName} collects, uses, and protects your personal information. Your data security is our priority.`;
+const description = `Read how ${BRAND.brandName} collects, uses, and protects your personal data. Your privacy matters to us. Need drainage help? Call ${BRAND.phoneFormatted} today.`;
 const today = new Date().toLocaleDateString('en-GB');
 
 const breadcrumbSchema = getBreadcrumbSchema([
@@ -80,6 +80,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
           {BRAND.brandName}<br />
           {BRAND.addressLine1}, {BRAND.addressLine2}<br />
           {BRAND.postcode}
+        </p>
+        <p>
+          See also our <a href="/terms/" class="text-primary hover:underline">terms of service</a> and <a href="/cookies/" class="text-primary hover:underline">cookie policy</a>. For drainage enquiries, visit our <a href="/contact/" class="text-primary hover:underline">contact page</a> or call us directly.
         </p>
       </div>
     </div>

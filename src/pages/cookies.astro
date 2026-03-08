@@ -4,10 +4,10 @@ import { BRAND } from '../data/brand';
 import { getBreadcrumbSchema } from '../utils/schema';
 
 // SEO-optimized title (50-60 chars)
-const title = `Cookie Policy | ${BRAND.brandName}`;
+const title = `Cookie Policy | ${BRAND.brandName} Website`;
 
 // SEO-optimized description (120-155 chars)
-const description = `Learn about the cookies used on the ${BRAND.brandName} website, how they work, and how to manage your cookie preferences for the best experience.`;
+const description = `Learn how the ${BRAND.brandName} website uses cookies and how to manage your preferences. Need drainage help? Call ${BRAND.phoneFormatted} for a free quote.`;
 const today = new Date().toLocaleDateString('en-GB');
 
 const breadcrumbSchema = getBreadcrumbSchema([
@@ -82,6 +82,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
         <p>
           For questions about our cookie policy, contact us at:
           <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>
+        </p>
+        <p>
+          You can also read our <a href="/privacy/" class="text-primary hover:underline">privacy policy</a> and <a href="/terms/" class="text-primary hover:underline">terms of service</a>, or <a href="/contact/" class="text-primary hover:underline">get in touch with our team</a> about any questions.
         </p>
       </div>
     </div>

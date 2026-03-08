@@ -70,7 +70,7 @@ export function getBaseBusinessSchema() {
           "@type": "Service",
           "name": service.name,
           "description": service.description,
-          "url": `${siteUrl}/services/${service.slug}`
+          "url": `${siteUrl}/services/${service.slug}/`
         }
       }))
     },
@@ -110,7 +110,7 @@ export function getServicePageSchema(service: Service) {
     "@id": `${siteUrl}/services/${service.slug}/#service`,
     "name": service.name,
     "description": service.description,
-    "url": `${siteUrl}/services/${service.slug}`,
+    "url": `${siteUrl}/services/${service.slug}/`,
     "provider": {
       "@id": `${siteUrl}/#business`
     },
@@ -127,15 +127,15 @@ export function getServicePageSchema(service: Service) {
           "@type": "Service",
           "name": sub.name,
           "description": sub.description,
-          "url": `${siteUrl}/services/${service.slug}/${sub.slug}`
+          "url": `${siteUrl}/services/${service.slug}/${sub.slug}/`
         }
       }))
     } : undefined,
     "serviceType": service.name,
-    "termsOfService": `${siteUrl}/terms`,
+    "termsOfService": `${siteUrl}/terms/`,
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/contact`,
+      "serviceUrl": `${siteUrl}/contact/`,
       "servicePhone": `+44${BRAND.phone.substring(1)}`,
       "availableLanguage": "English"
     }
@@ -168,12 +168,12 @@ export function getSubServicePageSchema(service: Service, subService: SubService
     "isRelatedTo": {
       "@type": "Service",
       "name": service.name,
-      "url": `${siteUrl}/services/${service.slug}`
+      "url": `${siteUrl}/services/${service.slug}/`
     },
     "serviceType": subService.name,
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/contact`,
+      "serviceUrl": `${siteUrl}/contact/`,
       "servicePhone": `+44${BRAND.phone.substring(1)}`,
       "availableLanguage": "English"
     }
@@ -227,7 +227,7 @@ export function getLocationServicePageSchema(location: Location, service: Servic
     "@id": `${siteUrl}/locations/${location.slug}/${service.slug}/#service`,
     "name": `${service.name} in ${location.name}`,
     "description": `Professional ${service.name.toLowerCase()} services in ${location.name}, ${location.countyOrRegion || 'South Yorkshire'}. Fast response, no call-out fee, 24/7 availability.`,
-    "url": `${siteUrl}/locations/${location.slug}/${service.slug}`,
+    "url": `${siteUrl}/locations/${location.slug}/${service.slug}/`,
     "provider": {
       "@id": `${siteUrl}/#business`
     },
@@ -243,7 +243,7 @@ export function getLocationServicePageSchema(location: Location, service: Servic
     "serviceType": service.name,
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/contact`,
+      "serviceUrl": `${siteUrl}/contact/`,
       "servicePhone": `+44${BRAND.phone.substring(1)}`,
       "availableLanguage": "English"
     }
@@ -337,7 +337,7 @@ export function getBlogArticleSchema(post: {
     "dateModified": post.updatedDate || post.publishDate,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${siteUrl}/blog/${post.slug}`
+      "@id": `${siteUrl}/blog/${post.slug}/`
     },
     "articleSection": post.category,
     "inLanguage": "en-GB"
