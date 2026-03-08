@@ -18,8 +18,6 @@ export const BRAND = {
 
   socialProfiles: [
     "https://www.facebook.com/BlockedDrainsSheffield",
-    "https://twitter.com/DrainSheffield",
-    "https://www.instagram.com/blockeddrains_sheffield",
-    "https://www.linkedin.com/company/blocked-drains-sheffield"
+    "https://www.instagram.com/blockeddrains_sheffield"
   ]
 };

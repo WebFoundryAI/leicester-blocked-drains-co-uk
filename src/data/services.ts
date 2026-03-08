@@ -22,7 +22,7 @@ export const SERVICES: Service[] = [
     shortLabel: "Blocked drains cleared fast",
     description: "Professional drain unblocking service using the latest equipment. We clear all types of blockages quickly and efficiently.",
     icon: "🚿",
-    ogImage: "/og/blocked-drains-og.jpg",
+    ogImage: "/og/blocked-drains-og.webp",
     subServices: [
       {
         slug: "blocked-toilet",
@@ -50,7 +50,7 @@ export const SERVICES: Service[] = [
     shortLabel: "Sink and toilet unblocking",
     description: "Expert unblocking of sinks, toilets, baths, and shower drains. No call-out charges, fixed pricing.",
     icon: "🔧",
-    ogImage: "/og/drain-unblocking-og.jpg",
+    ogImage: "/og/drain-unblocking-og.webp",
     subServices: [
       {
         slug: "external-drain-unblocking",
@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
     shortLabel: "CCTV drain inspections",
     description: "High-definition CCTV surveys to diagnose drainage issues accurately. Detailed reports provided.",
     icon: "📹",
-    ogImage: "/og/cctv-surveys-og.jpg",
+    ogImage: "/og/cctv-surveys-og.webp",
     subServices: [
       {
         slug: "pre-purchase-survey",
@@ -94,7 +94,7 @@ export const SERVICES: Service[] = [
     shortLabel: "High-pressure jetting",
     description: "Powerful high-pressure water jetting to clear stubborn blockages and clean drains thoroughly.",
     icon: "💧",
-    ogImage: "/og/drain-jetting-og.jpg",
+    ogImage: "/og/drain-jetting-og.webp",
     subServices: [
       {
         slug: "domestic-jetting",
@@ -116,7 +116,7 @@ export const SERVICES: Service[] = [
     shortLabel: "24/7 emergency callouts",
     description: "Round-the-clock emergency drainage services. Fast response times when you need us most.",
     icon: "🚨",
-    ogImage: "/og/emergency-drains-og.jpg",
+    ogImage: "/og/emergency-drains-og.webp",
     subServices: [
       {
         slug: "flooding-emergency",
@@ -138,7 +138,7 @@ export const SERVICES: Service[] = [
     shortLabel: "Drain repair services",
     description: "Professional drain repair services including pipe repairs, relining, and replacement.",
     icon: "🔧",
-    ogImage: "/og/blockeddrainssheffield-og.jpg",
+    ogImage: "/og/blockeddrainssheffield-og.webp",
     subServices: [
       {
         slug: "pipe-relining",

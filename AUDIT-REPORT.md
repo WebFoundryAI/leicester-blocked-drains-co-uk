@@ -80,8 +80,11 @@
 - Affected URLs: service pages, sub-service pages, location+service pages, blog posts, contact/terms links
 - **No fake data found** — fake reviews were already removed in a prior commit
 
-### Manual follow-up needed:
-- Verify social profile URLs in `brand.ts` are live pages (Facebook, Twitter/X, Instagram, LinkedIn)
+### Social profiles verified:
+- Facebook (`/BlockedDrainsSheffield`) — **live** ✓
+- Instagram (`/blockeddrains_sheffield`) — **live** ✓
+- Twitter/X (`/DrainSheffield`) — **dead, removed** ✓
+- LinkedIn (`/company/blocked-drains-sheffield`) — **dead, removed** ✓
 
 ---
 
@@ -105,9 +108,9 @@
 - Consent scripts correctly placed before GTM ✓
 - Body scripts at end of document (equivalent to defer) ✓
 
-### Manual follow-up:
-- OG images exist in both `.jpg` and `.webp` — meta tags reference `.jpg` only. Consider switching to `.webp` for smaller social share payloads, or remove orphaned `.webp` OG files
-- Consider externalising inline form scripts (`HeroLeadForm.astro`, `LeadForm.astro`) to reduce duplication on pages with both components
+### Additional fixes applied:
+- **OG images switched to `.webp`** — all meta tags now reference `.webp` versions; orphaned `.jpg` OG files deleted (8 files removed)
+- **Form scripts externalised** — duplicate ~190-line inline `<script>` blocks in `HeroLeadForm.astro` and `LeadForm.astro` replaced with single shared `public/js/lead-form.js`
 
 ---
 
@@ -137,7 +140,7 @@
 
 | Metric | Value |
 |---|---|
-| **Total files modified** | 12 |
+| **Total files modified** | 18 |
 | **Build status** | PASS (106 pages, 1.13s) |
 | **Pages with new internal links** | 5 |
 | **Titles rewritten** | 3 |
@@ -162,3 +165,18 @@
 12. `src/utils/schema.ts`
 13. `src/layouts/BaseLayout.astro`
 14. `tailwind.config.mjs`
+15. `src/data/brand.ts` (removed dead social profiles)
+16. `src/data/services.ts` (switched OG images to .webp)
+17. `src/components/HeroLeadForm.astro` (externalised form script)
+18. `src/components/LeadForm.astro` (externalised form script)
+19. `public/js/lead-form.js` (new shared form script)
+
+### Files deleted:
+- `public/og/blocked-drains-og.jpg`
+- `public/og/drain-unblocking-og.jpg`
+- `public/og/cctv-surveys-og.jpg`
+- `public/og/drain-jetting-og.jpg`
+- `public/og/emergency-drains-og.jpg`
+- `public/og/blockeddrainssheffield-og.jpg`
+- `public/og/locations-og.jpg`
+- `public/images/og-default.jpg`
