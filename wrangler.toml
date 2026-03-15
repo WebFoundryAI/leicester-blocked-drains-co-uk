@@ -36,8 +36,8 @@ compatibility_date = "2024-12-20"
 #   Settings > Functions > D1 database bindings > Variable name: DB
 [[d1_databases]]
 binding = "DB"
-database_name = "sheffield-leads"
-database_id = "382e0f08-4c1b-48a1-bef6-3a9d31927627"
+database_name = "leicester-leads"
+database_id = "63d6a0da-efd2-4983-a25f-7f91077d22c3"
 
 # Pages build output directory
 pages_build_output_dir = "dist"
