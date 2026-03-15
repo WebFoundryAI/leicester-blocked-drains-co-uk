@@ -1,7 +1,7 @@
 # Cloudflare Worker Configuration for Trailing Slash Rewrite
 # This worker handles internal URL rewriting for trailing slashes
 
-name = "sheffield-blocked-drain-trailing-slash-rewrite"
+name = "leicester-blocked-drains-trailing-slash-rewrite"
 type = "javascript"
 main = "src/worker.ts"
 
@@ -15,22 +15,22 @@ workers_dev = false
 # Deployment route: applies this worker to all paths on the domain
 # Pattern: https://<domain>/*
 routes = [
-  { pattern = "blockeddrainssheffield.co.uk/*", zone_id = "318cef83dc18e079524943da7410f1b4" }
+  { pattern = "leicesterblockeddrains.co.uk/*", zone_id = "" }
 ]
 
 # Environment: Development
 [env.development]
 vars = { ENVIRONMENT = "development" }
 routes = [
-  { pattern = "blockeddrainssheffield.co.uk/*", zone_id = "318cef83dc18e079524943da7410f1b4" }
+  { pattern = "leicesterblockeddrains.co.uk/*", zone_id = "" }
 ]
 
 # Compatibility Date
 compatibility_date = "2024-12-20"
 
 # D1 Database binding for lead capture
-# Create the database:  wrangler d1 create sheffield-leads
-# Run migrations:       wrangler d1 migrations apply sheffield-leads
+# Create the database:  wrangler d1 create leicester-leads
+# Run migrations:       wrangler d1 migrations apply leicester-leads
 # Then update the database_id below with the value from the create command.
 # Also add a D1 binding in Cloudflare Pages dashboard:
 #   Settings > Functions > D1 database bindings > Variable name: DB
