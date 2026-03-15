@@ -1,6 +1,6 @@
-# Blocked Drains Sheffield - robots.txt
-# https://blockeddrainssheffield.co.uk
-# Last updated: 2026-03-05
+# Leicester Blocked Drains - robots.txt
+# https://leicesterblockeddrains.co.uk
+# Last updated: 2026-03-15
 
 # ==============================================
 # AI CRAWLER POLICIES
@@ -44,7 +44,7 @@ Disallow: /status
 Disallow: /_astro/
 
 # Sitemap location
-Sitemap: https://blockeddrainssheffield.co.uk/sitemap.xml
+Sitemap: https://leicesterblockeddrains.co.uk/sitemap.xml
 
 # Host preference (canonical non-www HTTPS)
-Host: https://blockeddrainssheffield.co.uk
+Host: https://leicesterblockeddrains.co.uk

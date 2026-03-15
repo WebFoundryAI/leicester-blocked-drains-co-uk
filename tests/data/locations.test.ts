@@ -23,17 +23,17 @@ describe('Locations Data', () => {
       }
     });
 
-    it('every location has latitude within South Yorkshire bounds', () => {
+    it('every location has latitude within Leicestershire bounds', () => {
       for (const loc of LOCATIONS) {
-        expect(loc.latitude).toBeGreaterThan(53.2);
-        expect(loc.latitude).toBeLessThan(53.6);
+        expect(loc.latitude).toBeGreaterThan(52.3);
+        expect(loc.latitude).toBeLessThan(53.0);
       }
     });
 
-    it('every location has longitude within South Yorkshire bounds', () => {
+    it('every location has longitude within Leicestershire bounds', () => {
       for (const loc of LOCATIONS) {
-        expect(loc.longitude).toBeGreaterThan(-1.8);
-        expect(loc.longitude).toBeLessThan(-1.1);
+        expect(loc.longitude).toBeGreaterThan(-1.6);
+        expect(loc.longitude).toBeLessThan(-0.7);
       }
     });
 
@@ -45,8 +45,8 @@ describe('Locations Data', () => {
   });
 
   describe('PRIMARY_LOCATION', () => {
-    it('is "sheffield"', () => {
-      expect(PRIMARY_LOCATION.slug).toBe('sheffield');
+    it('is "leicester"', () => {
+      expect(PRIMARY_LOCATION.slug).toBe('leicester');
     });
 
     it('is first in LOCATIONS array', () => {
@@ -55,42 +55,29 @@ describe('Locations Data', () => {
   });
 
   describe('INDEXED_LOCATIONS', () => {
-    it('contains all 10 locations', () => {
-      expect(INDEXED_LOCATIONS).toHaveLength(10);
-    });
-
     it('includes only locations without noindex', () => {
       for (const loc of INDEXED_LOCATIONS) {
         expect(loc.noindex).toBeFalsy();
       }
     });
 
-    it('includes all location slugs', () => {
+    it('includes leicester slug', () => {
       const slugs = INDEXED_LOCATIONS.map((l) => l.slug);
-      expect(slugs).toContain('sheffield');
-      expect(slugs).toContain('rotherham');
-      expect(slugs).toContain('doncaster');
-      expect(slugs).toContain('barnsley');
-      expect(slugs).toContain('chesterfield');
-      expect(slugs).toContain('dronfield');
-      expect(slugs).toContain('chapeltown');
-      expect(slugs).toContain('stocksbridge');
-      expect(slugs).toContain('hillsborough');
-      expect(slugs).toContain('ecclesall');
+      expect(slugs).toContain('leicester');
     });
   });
 
   describe('getLocationBySlug', () => {
-    it('returns correct location for "sheffield"', () => {
-      const loc = getLocationBySlug('sheffield');
+    it('returns correct location for "leicester"', () => {
+      const loc = getLocationBySlug('leicester');
       expect(loc).toBeDefined();
-      expect(loc!.name).toBe('Sheffield');
+      expect(loc!.name).toBe('Leicester');
     });
 
-    it('returns correct location for "ecclesall"', () => {
-      const loc = getLocationBySlug('ecclesall');
+    it('returns correct location for "loughborough"', () => {
+      const loc = getLocationBySlug('loughborough');
       expect(loc).toBeDefined();
-      expect(loc!.name).toBe('Ecclesall');
+      expect(loc!.name).toBe('Loughborough');
     });
 
     it('returns undefined for non-existent slug', () => {

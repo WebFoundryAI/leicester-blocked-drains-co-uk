@@ -23,7 +23,7 @@ export function getBaseBusinessSchema() {
     "@type": "Plumber",
     "@id": `${siteUrl}/#business`,
     "name": BRAND.brandName,
-    "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Sheffield and South Yorkshire. Fast response, no call-out fee, 24/7 availability.",
+    "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Leicester and Leicestershire. Fast response, no call-out fee, 24/7 availability.",
     "url": siteUrl,
     "telephone": `+44${BRAND.phone.substring(1)}`,
     "email": BRAND.email,
@@ -32,15 +32,15 @@ export function getBaseBusinessSchema() {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
-      "addressLocality": "Sheffield",
-      "addressRegion": "South Yorkshire",
+      "addressLocality": "Leicester",
+      "addressRegion": "Leicestershire",
       "postalCode": BRAND.postcode,
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 53.3811,
-      "longitude": -1.4701
+      "latitude": 52.6369,
+      "longitude": -1.1398
     },
     "openingHoursSpecification": [
       {
@@ -58,7 +58,7 @@ export function getBaseBusinessSchema() {
       "name": area,
       "containedInPlace": {
         "@type": "AdministrativeArea",
-        "name": "South Yorkshire"
+        "name": "Leicestershire"
       }
     })),
     "hasOfferCatalog": {
@@ -202,7 +202,7 @@ export function getLocationPageSchema(location: Location) {
       },
       "containedInPlace": {
         "@type": "AdministrativeArea",
-        "name": location.countyOrRegion || "South Yorkshire"
+        "name": location.countyOrRegion || "Leicestershire"
       }
     },
     "geo": {
@@ -226,7 +226,7 @@ export function getLocationServicePageSchema(location: Location, service: Servic
     "@type": "Service",
     "@id": `${siteUrl}/locations/${location.slug}/${service.slug}/#service`,
     "name": `${service.name} in ${location.name}`,
-    "description": `Professional ${service.name.toLowerCase()} services in ${location.name}, ${location.countyOrRegion || 'South Yorkshire'}. Fast response, no call-out fee, 24/7 availability.`,
+    "description": `Professional ${service.name.toLowerCase()} services in ${location.name}, ${location.countyOrRegion || 'Leicestershire'}. Fast response, no call-out fee, 24/7 availability.`,
     "url": `${siteUrl}/locations/${location.slug}/${service.slug}/`,
     "provider": {
       "@id": `${siteUrl}/#business`
@@ -364,14 +364,14 @@ export function getOrganizationSchema() {
       "height": 630
     },
     "image": `${siteUrl}/images/og-default.jpg`,
-    "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Sheffield and South Yorkshire. Fast response, no call-out fee, 24/7 availability.",
+    "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Leicester and Leicestershire. Fast response, no call-out fee, 24/7 availability.",
     "telephone": `+44${BRAND.phone.substring(1)}`,
     "email": BRAND.email,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
-      "addressLocality": "Sheffield",
-      "addressRegion": "South Yorkshire",
+      "addressLocality": "Leicester",
+      "addressRegion": "Leicestershire",
       "postalCode": BRAND.postcode,
       "addressCountry": "GB"
     },
@@ -402,8 +402,8 @@ export function getOrganizationSchema() {
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Sheffield",
-        "addressRegion": "South Yorkshire",
+        "addressLocality": "Leicester",
+        "addressRegion": "Leicestershire",
         "addressCountry": "GB"
       }
     },
@@ -494,7 +494,7 @@ export function getWebSiteSchema() {
     "@id": `${siteUrl}/#website`,
     "url": siteUrl,
     "name": BRAND.brandName,
-    "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Sheffield and South Yorkshire.",
+    "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Leicester and Leicestershire.",
     "publisher": {
       "@id": `${siteUrl}/#organization`
     },
