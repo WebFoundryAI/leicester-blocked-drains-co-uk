@@ -13,7 +13,7 @@ export const BRAND = {
   emergencyAvailable: true,
 
   // Per-site tracking & verification — update these when cloning the template
-  ga4Id: "G-LG27HY6YJD",
+  ga4Id: "G-RX0LKRZJC9",
   gscVerification: "google961cee0b68e77cd7",
   gscVerification2: "HRdvAYAFYQcZQ2-NkO5cN1W32Fwt0sLQw-yNAEZZ_Nw",
 
