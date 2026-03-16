@@ -1,6 +1,7 @@
 # Cloudflare Worker Configuration for Trailing Slash Rewrite
 # This worker handles internal URL rewriting for trailing slashes
 
+pages_build_output_dir = "dist"
 name = "leicester-blocked-drains-trailing-slash-rewrite"
 type = "javascript"
 main = "src/worker.ts"
@@ -39,8 +40,6 @@ binding = "DB"
 database_name = "leicester-leads"
 database_id = "63d6a0da-efd2-4983-a25f-7f91077d22c3"
 
-# Pages build output directory
-pages_build_output_dir = "dist"
 
 # Build Configuration
 [build]
