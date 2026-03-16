@@ -7,15 +7,15 @@ import { LOCATIONS } from '../data/locations';
 import { getCompleteHomepageSchema, getFAQSchema } from '../utils/schema';
 import { HOMEPAGE_FAQS } from '../data/faqs';
 
-const title = `Blocked Drains Sheffield | 24/7 Emergency Unblocking`;
-const description = `Blocked drains in Sheffield fixed fast. Local engineers, fixed pricing, and 24/7 emergency drainage response. Call ${BRAND.phoneFormatted} or request a quote online.`;
+const title = `Leicester Blocked Drains | 24/7 Emergency Unblocking`;
+const description = `Blocked drains in Leicester fixed fast. Local engineers, fixed pricing, and 24/7 emergency drainage response. Call ${BRAND.phoneFormatted} or request a quote online.`;
 const homepageFaqs = HOMEPAGE_FAQS.slice(0, 6);
 const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs)];
 ---
 
 <BaseLayout title={title} description={description} canonical="/" schema={schema}>
   <HeroWithLeadForm
-    title="Blocked Drains Sheffield — fast fixes, fair pricing"
+    title="Leicester Blocked Drains — fast fixes, fair pricing"
     description="Get same-day drainage support from experienced local engineers. We clear blocked sinks, toilets, and outside drains with no hidden extras."
     formId="home-lead-form"
     source="homepage"
@@ -39,10 +39,10 @@ const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs)];
 
   <section class="section-padding bg-white">
     <div class="container-wide px-4">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Trusted blocked drain specialists in Sheffield</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Trusted blocked drain specialists in Leicester</h2>
       <div class="max-w-3xl">
         <p class="text-muted-foreground mb-4">Blocked drains cause stress and disruption. Whether it is a backed-up toilet, a slow-draining sink, or sewage flooding your garden, you need it sorted quickly. That is exactly what we do.</p>
-        <p class="text-muted-foreground mb-4">{BRAND.brandName} provides fast, reliable drainage services to homes and businesses across Sheffield and South Yorkshire. Our fully insured engineers carry modern equipment including high-pressure jetting rigs, CCTV cameras, and electro-mechanical machines. We diagnose the problem on site and fix it the same day wherever possible.</p>
+        <p class="text-muted-foreground mb-4">{BRAND.brandName} provides fast, reliable drainage services to homes and businesses across Leicester and Leicestershire. Our fully insured engineers carry modern equipment including high-pressure jetting rigs, CCTV cameras, and electro-mechanical machines. We diagnose the problem on site and fix it the same day wherever possible.</p>
         <p class="text-muted-foreground">We work with homeowners, landlords, letting agents, property managers, and commercial clients. From a <a href="/services/blocked-drains/blocked-toilet/" class="text-primary hover:underline">blocked toilet</a> in Hillsborough to a collapsed drain in Rotherham, we have the tools and experience to help.</p>
       </div>
     </div>
@@ -73,19 +73,19 @@ const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs)];
 
   <section class="section-padding">
     <div class="container-wide px-4">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Local drainage experts across South Yorkshire</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Local drainage experts across Leicestershire</h2>
       <div class="max-w-3xl">
-        <p class="text-muted-foreground mb-4">Being based in Sheffield means we know the area inside out. Older properties near the city centre often have clay pipes prone to root damage. Homes in Ecclesall and Dore sit on sloped ground where surface water drainage can cause issues. Terraced houses in Hillsborough and Walkley share drain runs that need specialist attention.</p>
-        <p class="text-muted-foreground mb-4">We also cover Rotherham, Barnsley, Doncaster, Chesterfield, and surrounding towns. Our engineers carry the right equipment for every job, from <a href="/services/drain-jetting/" class="text-primary hover:underline">high-pressure drain jetting</a> to <a href="/services/cctv-drain-surveys/" class="text-primary hover:underline">CCTV drain inspections</a> and <a href="/services/drain-repairs/" class="text-primary hover:underline">drain repairs</a>.</p>
-        <p class="text-muted-foreground">Most emergency call-outs in Sheffield are attended within 60 to 90 minutes. For planned work, we offer flexible appointment slots to suit your schedule.</p>
+        <p class="text-muted-foreground mb-4">Being based in Leicester means we know the area inside out. Older properties in Belgrave and Highfields often have clay pipes prone to root damage. Homes in Clarendon Park and Stoneygate sit on ground where surface water drainage can cause issues. Terraced houses in Evington and Aylestone share drain runs that need specialist attention.</p>
+        <p class="text-muted-foreground mb-4">We also cover Loughborough, Hinckley, Oadby, Wigston, and surrounding towns. Our engineers carry the right equipment for every job, from <a href="/services/drain-jetting/" class="text-primary hover:underline">high-pressure drain jetting</a> to <a href="/services/cctv-drain-surveys/" class="text-primary hover:underline">CCTV drain inspections</a> and <a href="/services/drain-repairs/" class="text-primary hover:underline">drain repairs</a>.</p>
+        <p class="text-muted-foreground">Most emergency call-outs in Leicester are attended within 60 to 90 minutes. For planned work, we offer flexible appointment slots to suit your schedule.</p>
       </div>
     </div>
   </section>
 
   <section class="section-padding bg-white">
     <div class="container-wide px-4">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Coverage near Sheffield</h2>
-      <p class="text-muted-foreground mb-8">We cover Sheffield and South Yorkshire locations including:</p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Coverage near Leicester</h2>
+      <p class="text-muted-foreground mb-8">We cover Leicester and Leicestershire locations including:</p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {LOCATIONS.map((location) => (
           <a class="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md hover:border-primary transition-all no-underline text-foreground" href={`/locations/${location.slug}/`}>Blocked drains in {location.name}</a>
