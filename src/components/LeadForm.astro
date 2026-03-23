@@ -34,21 +34,19 @@ const {
       <p class="text-red-700 text-xs mt-0.5" id={`${formId}-name-error`}></p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-3">
-      <div>
-        <label class="block font-semibold mb-1" for={`${formId}-phone`}>Phone</label>
-        <input class="w-full border border-border rounded-lg bg-white px-3 py-2" id={`${formId}-phone`} name="phone" type="tel" required autocomplete="tel" inputmode="tel" />
-        <p class="text-red-700 text-xs mt-0.5" id={`${formId}-phone-error`}></p>
-      </div>
+    <div>
+      <label class="block font-semibold mb-1" for={`${formId}-phone`}>Phone</label>
+      <input class="w-full border border-border rounded-lg bg-white px-3 py-2" id={`${formId}-phone`} name="phone" type="tel" required autocomplete="tel" inputmode="tel" />
+      <p class="text-red-700 text-xs mt-0.5" id={`${formId}-phone-error`}></p>
+    </div>
 
-      <div>
-        <label class="block font-semibold mb-1" for={`${formId}-postcode`}>Postcode</label>
-        <div class="grid grid-cols-[1fr_auto] gap-2">
-          <input class="w-full border border-border rounded-lg bg-white px-3 py-2" id={`${formId}-postcode`} name="postcode" type="text" required autocomplete="postal-code" />
-          <button class="btn-outline cursor-pointer" type="button" data-action="lookup">Find address</button>
-        </div>
-        <p class="text-red-700 text-xs mt-0.5" id={`${formId}-postcode-error`}></p>
+    <div>
+      <label class="block font-semibold mb-1" for={`${formId}-postcode`}>Postcode</label>
+      <div class="grid grid-cols-[1fr_auto] gap-2">
+        <input class="w-full border border-border rounded-lg bg-white px-3 py-2" id={`${formId}-postcode`} name="postcode" type="text" required autocomplete="postal-code" />
+        <button class="btn-outline cursor-pointer" type="button" data-action="lookup">Find address</button>
       </div>
+      <p class="text-red-700 text-xs mt-0.5" id={`${formId}-postcode-error`}></p>
     </div>
 
     <div id={`${formId}-address-lookup-wrap`} class="hidden">

@@ -100,49 +100,70 @@
 
         var data = await res.json();
 
-        if (!res.ok || !Array.isArray(data.addresses) || !data.addresses.length) {
-          setFieldError('postcode', data.error || 'No addresses found. Please type your address manually.');
+        if (!res.ok) {
+          setFieldError('postcode', data.error || 'Postcode not found.');
+          if (addressManualWrap) addressManualWrap.classList.remove('hidden');
           return;
         }
 
-        if (addressSelect instanceof HTMLSelectElement) {
-          addressSelect.textContent = '';
-          var defaultOpt = document.createElement('option');
-          defaultOpt.value = '';
-          defaultOpt.textContent = 'Select an address';
-          addressSelect.appendChild(defaultOpt);
-          data.addresses.forEach(function (addr) {
+        if (data.postcode && postcodeInput) {
+          postcodeInput.value = data.postcode;
+        }
+
+        if (data.addresses && data.addresses.length > 0 && addressSelect instanceof HTMLSelectElement) {
+          addressSelect.innerHTML = '<option value="">Select your address (' + data.addresses.length + ' found)</option>';
+          data.addresses.forEach(function(addr) {
             var opt = document.createElement('option');
-            opt.value = addr.line;
-            opt.textContent = addr.line;
+            opt.value = addr;
+            opt.textContent = addr;
             addressSelect.appendChild(opt);
           });
-        }
-        if (addressLookupWrap) addressLookupWrap.classList.remove('hidden');
-        if (addressManualWrap) addressManualWrap.classList.add('hidden');
-        if (addressSelect instanceof HTMLSelectElement) {
+          var manualOpt = document.createElement('option');
+          manualOpt.value = '__manual__';
+          manualOpt.textContent = '— My address is not listed —';
+          addressSelect.appendChild(manualOpt);
+          if (addressLookupWrap) addressLookupWrap.classList.remove('hidden');
+          if (addressManualWrap) addressManualWrap.classList.add('hidden');
           addressSelect.focus();
-          try { addressSelect.showPicker(); } catch (_) {}
+        } else {
+          if (addressManualWrap) addressManualWrap.classList.remove('hidden');
+          if (addressLookupWrap) addressLookupWrap.classList.add('hidden');
+          if (addressInput instanceof HTMLInputElement) addressInput.focus();
         }
+
+        setFieldError('postcode', '');
+        button.textContent = originalText;
+        return;
       } catch (err) {
-        setFieldError('postcode', 'Could not find addresses. Please type your address manually.');
+        setFieldError('postcode', 'Could not look up addresses. Please type your address manually.');
         if (addressManualWrap) addressManualWrap.classList.remove('hidden');
       } finally {
-        button.textContent = originalText;
+        if (button.textContent === 'Searching…') button.textContent = originalText;
         button.disabled = false;
       }
     });
 
-    // Auto-fill address when user selects from dropdown
     if (addressSelect) {
-      addressSelect.addEventListener('change', (event) => {
-        const target = event.target;
-        if (target instanceof HTMLSelectElement && addressInput instanceof HTMLInputElement && target.value) {
-          addressInput.value = target.value;
+      addressSelect.addEventListener('change', function(event) {
+        var sel = event.target;
+        if (!(sel instanceof HTMLSelectElement)) return;
+        if (!sel.value) return;
+
+        if (sel.value === '__manual__') {
           if (addressLookupWrap) addressLookupWrap.classList.add('hidden');
           if (addressManualWrap) addressManualWrap.classList.remove('hidden');
-          addressInput.readOnly = true;
+          if (addressInput instanceof HTMLInputElement) {
+            addressInput.value = '';
+            addressInput.focus();
+          }
+          return;
         }
+
+        if (addressInput instanceof HTMLInputElement) {
+          addressInput.value = sel.value;
+        }
+        if (addressLookupWrap) addressLookupWrap.classList.add('hidden');
+        if (addressManualWrap) addressManualWrap.classList.remove('hidden');
       });
     }
 
