@@ -1,0 +1,14 @@
+{
+  "site_name": "Leicester Plumber",
+  "city": "Leicester",
+  "region": "Leicestershire",
+  "country": "England",
+  "tier": 2,
+  "domain": "leicester-blocked-drains.co.uk",
+  "layout_variant": "hero-cta",
+  "theme_variant": "trust-blue",
+  "status": "active",
+  "github_repo": "https://github.com/WebFoundryAI/leicester-blocked-drains-co-uk.git",
+  "source_folder": "rank-to-rent-sites/leicester-blocked-drains-co-uk",
+  "notes": "Tier 2 site. Migrated from existing rank-to-rent-sites folder."
+}
