@@ -122,7 +122,7 @@ export function getLocationFAQs(locationName: string): FAQ[] {
 export const PAGE_FAQS: FAQ[] = [
   {
     question: "How quickly can you respond to an emergency callout?",
-    answer: 'We aim to respond to <a href="/services/emergency-drain-services/" class="text-primary hover:underline">emergency drainage callouts</a> within 60-90 minutes across <a href="/locations/sheffield/" class="text-primary hover:underline">Sheffield</a> and South Yorkshire. Our team operates around the clock, so help is available whenever you need it, day or night.'
+    answer: 'We aim to respond to <a href="/services/emergency-drain-services/" class="text-primary hover:underline">emergency drainage callouts</a> within 60-90 minutes across <a href="/locations/leicester/" class="text-primary hover:underline">Leicester</a> and the East Midlands. Our team operates around the clock, so help is available whenever you need it, day or night.'
   },
   {
     question: "Do you charge a call-out fee?",
@@ -130,7 +130,7 @@ export const PAGE_FAQS: FAQ[] = [
   },
   {
     question: "What locations do you cover?",
-    answer: 'We provide drainage services throughout <a href="/locations/sheffield/" class="text-primary hover:underline">Sheffield</a> and South Yorkshire, including <a href="/locations/rotherham/" class="text-primary hover:underline">Rotherham</a>, <a href="/locations/doncaster/" class="text-primary hover:underline">Doncaster</a>, <a href="/locations/barnsley/" class="text-primary hover:underline">Barnsley</a>, Chesterfield, Dronfield, Chapeltown, Stocksbridge, Hillsborough, and Ecclesall. See <a href="/locations/" class="text-primary hover:underline">all locations we cover</a>.'
+    answer: 'We provide drainage services throughout <a href="/locations/leicester/" class="text-primary hover:underline">Leicester</a> and the East Midlands, including <a href="/locations/loughborough/" class="text-primary hover:underline">Loughborough</a>, <a href="/locations/hinckley/" class="text-primary hover:underline">Hinckley</a>, <a href="/locations/coalville/" class="text-primary hover:underline">Coalville</a>, <a href="/locations/market-harborough/" class="text-primary hover:underline">Market Harborough</a>, Melton Mowbray, Oadby, and Wigston. See <a href="/locations/" class="text-primary hover:underline">all locations we cover</a>.'
   },
   {
     question: "What payment methods do you accept?",

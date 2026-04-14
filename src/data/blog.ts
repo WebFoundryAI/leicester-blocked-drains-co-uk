@@ -432,7 +432,7 @@ While DIY drain rods might seem cheaper initially, consider:
 
 If you suspect pipe damage is causing recurring issues, a [CCTV drain survey](/services/cctv-drain-surveys/) can confirm whether [drain repairs](/services/drain-repairs/) are needed before committing to more extensive work.
 
-For reliable [drain clearing across Leicester](/locations/leicester/drain-jetting/), call ${BRAND.brandName} on ${BRAND.phoneFormatted} or [request a quote online](/contact/). We also cover [Rotherham](/locations/rotherham/), [Doncaster](/locations/doncaster/), and [Barnsley](/locations/barnsley/).`,
+For reliable [drain clearing across Leicester](/locations/leicester/drain-jetting/), call ${BRAND.brandName} on ${BRAND.phoneFormatted} or [request a quote online](/contact/). We also cover [Loughborough](/locations/loughborough/), [Hinckley](/locations/hinckley/), and [Oadby](/locations/oadby/).`,
     author: "Leicester Blocked Drains",
     publishDate: "2025-12-20",
     category: "Drain Services",

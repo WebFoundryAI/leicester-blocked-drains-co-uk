@@ -4,13 +4,14 @@ import HeroWithLeadForm from '../components/HeroWithLeadForm.astro';
 import { BRAND } from '../data/brand';
 import { SERVICES } from '../data/services';
 import { LOCATIONS } from '../data/locations';
-import { getCompleteHomepageSchema, getFAQSchema } from '../utils/schema';
+import { getCompleteHomepageSchema, getFAQSchema, getBreadcrumbSchema } from '../utils/schema';
 import { HOMEPAGE_FAQS } from '../data/faqs';
 
 const title = `Leicester Blocked Drains | 24/7 Emergency Unblocking`;
 const description = `Blocked drains in Leicester fixed fast. Local engineers, fixed pricing, and 24/7 emergency drainage response. Call ${BRAND.phoneFormatted} or request a quote online.`;
 const homepageFaqs = HOMEPAGE_FAQS.slice(0, 6);
-const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs)];
+const breadcrumbSchema = getBreadcrumbSchema([{ name: "Home", url: "/" }]);
+const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs), breadcrumbSchema];
 ---
 
 <BaseLayout title={title} description={description} canonical="/" schema={schema}>
@@ -43,7 +44,7 @@ const schema = [...getCompleteHomepageSchema(), getFAQSchema(homepageFaqs)];
       <div class="max-w-3xl">
         <p class="text-muted-foreground mb-4">Blocked drains cause stress and disruption. Whether it is a backed-up toilet, a slow-draining sink, or sewage flooding your garden, you need it sorted quickly. That is exactly what we do.</p>
         <p class="text-muted-foreground mb-4">{BRAND.brandName} provides fast, reliable drainage services to homes and businesses across Leicester and Leicestershire. Our fully insured engineers carry modern equipment including high-pressure jetting rigs, CCTV cameras, and electro-mechanical machines. We diagnose the problem on site and fix it the same day wherever possible.</p>
-        <p class="text-muted-foreground">We work with homeowners, landlords, letting agents, property managers, and commercial clients. From a <a href="/services/blocked-drains/blocked-toilet/" class="text-primary hover:underline">blocked toilet</a> in Hillsborough to a collapsed drain in Rotherham, we have the tools and experience to help.</p>
+        <p class="text-muted-foreground">We work with homeowners, landlords, letting agents, property managers, and commercial clients. From a <a href="/services/blocked-drains/blocked-toilet/" class="text-primary hover:underline">blocked toilet</a> in Highfields to a collapsed drain in Hinckley, we have the tools and experience to help.</p>
       </div>
     </div>
   </section>

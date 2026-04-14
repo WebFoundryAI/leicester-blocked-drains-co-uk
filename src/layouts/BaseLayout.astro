@@ -52,15 +52,16 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={title} />
+    {BRAND.twitterHandle && <meta name="twitter:site" content={BRAND.twitterHandle} />}
+    {BRAND.twitterHandle && <meta name="twitter:creator" content={BRAND.twitterHandle} />}
 
     {schema && <script type="application/ld+json" set:html={serializeSchema(schema)} />}
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     {BRAND.gscVerification && <meta name="google-site-verification" content={BRAND.gscVerification} />}
-    {BRAND.gscVerification2 && <meta name="google-site-verification" content={BRAND.gscVerification2} />}
     <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" type="image/webp" media="(max-width: 767px)" />
-    <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/images/hero-bg.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high" />
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
@@ -124,7 +125,7 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
 
       <div class="container-wide px-4 py-3 flex items-center justify-between gap-4">
         <a href="/" class="flex items-center no-underline">
-          <img src="/images/leicester-blocked-drains-logo.webp" alt={BRAND.brandName} class="h-20 md:h-[100px] w-auto" width="600" height="277" />
+          <img src="/images/leicester-blocked-drains-logo.png" alt={BRAND.brandName} class="h-20 md:h-[100px] w-auto" width="600" height="277" loading="eager" />
         </a>
 
         <nav class="hidden lg:flex items-center gap-6" aria-label="Main navigation">
@@ -138,7 +139,7 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
 
         <a class="btn-primary hidden md:inline-flex no-underline" href={`tel:${BRAND.phone}`}>Call 24/7</a>
 
-        <button id="mobile-menu-button" class="border border-border bg-transparent font-semibold px-4 py-2 rounded-lg hover:bg-muted transition-all lg:hidden cursor-pointer" type="button" aria-label="Toggle navigation" aria-controls="mobile-menu" aria-expanded="false">Menu</button>
+        <button id="mobile-menu-button" class="border border-border bg-transparent font-semibold px-4 py-2 rounded-lg hover:bg-muted transition-all lg:hidden cursor-pointer" type="button" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false">Menu</button>
       </div>
 
       <nav id="mobile-menu" class="hidden lg:hidden border-t border-border" aria-label="Mobile navigation">
@@ -163,8 +164,8 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
         <div>
           <h3 class="font-semibold mb-2">{BRAND.brandName}</h3>
           <p class="text-sm text-slate-300">{BRAND.addressLine1}, {BRAND.addressLine2}, {BRAND.postcode}</p>
-          <p class="text-sm mt-2"><a href={`tel:${BRAND.phone}`} class="underline">{BRAND.phoneFormatted}</a></p>
-          <p class="text-sm"><a href={`mailto:${BRAND.email}`} class="underline">{BRAND.email}</a></p>
+          <p class="text-sm mt-2"><a href={`tel:${BRAND.phone}`} class="underline inline-block py-1">{BRAND.phoneFormatted}</a></p>
+          <p class="text-sm"><a href={`mailto:${BRAND.email}`} class="underline inline-block py-1">{BRAND.email}</a></p>
           <p class="text-sm mt-2">24/7 emergency response · Mon–Sun</p>
         </div>
 
@@ -199,7 +200,7 @@ const ogImage = image ? `${siteUrl}${image}` : defaultOgImage;
     <div class="fixed inset-x-0 bottom-0 z-[45] bg-white border-t border-border py-2 px-4 pb-[calc(0.5rem+env(safe-area-inset-bottom))] md:hidden">
       <div class="container-wide px-4 flex gap-2">
         <a class="btn-primary w-full no-underline" href={`tel:${BRAND.phone}`} aria-label="Call now">Call now</a>
-        <a class="btn-outline w-full no-underline" href="/contact/" aria-label="Get a free quote">Get quote</a>
+        <a class="btn-outline w-full no-underline" href="/contact/">Get quote</a>
       </div>
     </div>
 
