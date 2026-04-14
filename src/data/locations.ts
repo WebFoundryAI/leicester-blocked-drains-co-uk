@@ -11,8 +11,8 @@ export const PRIMARY_LOCATION: Location = {
   slug: "leicester",
   name: "Leicester",
   countyOrRegion: "Leicestershire",
-  latitude: 52.6369,
-  longitude: -1.1398,
+  latitude: 52.5984,
+  longitude: -1.0879,
 };
 
 export const LOCATIONS: Location[] = [

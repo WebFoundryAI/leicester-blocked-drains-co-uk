@@ -32,15 +32,15 @@ export function getBaseBusinessSchema() {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
-      "addressLocality": "Leicester",
+      "addressLocality": "Oadby",
       "addressRegion": "Leicestershire",
       "postalCode": BRAND.postcode,
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 52.6369,
-      "longitude": -1.1398
+      "latitude": 52.5984,
+      "longitude": -1.0879
     },
     "openingHoursSpecification": [
       {
@@ -359,18 +359,18 @@ export function getOrganizationSchema() {
     "url": siteUrl,
     "logo": {
       "@type": "ImageObject",
-      "url": `${siteUrl}/images/og-default.jpg`,
+      "url": `${siteUrl}/images/og-default.webp`,
       "width": 1200,
       "height": 630
     },
-    "image": `${siteUrl}/images/og-default.jpg`,
+    "image": `${siteUrl}/images/og-default.webp`,
     "description": "Professional drain unblocking, CCTV surveys, and emergency drainage services across Leicester and Leicestershire. Fast response, no call-out fee, 24/7 availability.",
     "telephone": `+44${BRAND.phone.substring(1)}`,
     "email": BRAND.email,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
-      "addressLocality": "Leicester",
+      "addressLocality": "Oadby",
       "addressRegion": "Leicestershire",
       "postalCode": BRAND.postcode,
       "addressCountry": "GB"
