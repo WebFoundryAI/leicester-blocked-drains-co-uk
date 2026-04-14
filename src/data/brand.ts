@@ -14,8 +14,7 @@ export const BRAND = {
 
   // Per-site tracking & verification — update these when cloning the template
   ga4Id: "G-RX0LKRZJC9",
-  gscVerification: "google961cee0b68e77cd7",
-  gscVerification2: "HRdvAYAFYQcZQ2-NkO5cN1W32Fwt0sLQw-yNAEZZ_Nw",
+  gscVerification: "HRdvAYAFYQcZQ2-NkO5cN1W32Fwt0sLQw-yNAEZZ_Nw",
 
   socialProfiles: [
     "https://www.facebook.com/BlockedDrainsLeicester",
