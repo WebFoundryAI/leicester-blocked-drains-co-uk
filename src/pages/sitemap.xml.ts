@@ -79,20 +79,20 @@ function generateSitemapUrls(): SitemapUrl[] {
 
   // Location pages (only indexed locations)
   for (const [i, location] of INDEXED_LOCATIONS.entries()) {
-    // Main location page (Sheffield gets higher priority)
-    const isSheffield = location.slug === 'sheffield';
+    // Main location page (Leicester gets higher priority as primary location)
+    const isLeicester = location.slug === 'leicester';
     urls.push({
       loc: `/locations/${location.slug}/`,
-      priority: isSheffield ? 0.9 : 0.8,
+      priority: isLeicester ? 0.9 : 0.8,
       changefreq: 'weekly',
-      lastmod: getStaggeredDate(isSheffield ? 1 : 2 + i),
+      lastmod: getStaggeredDate(isLeicester ? 1 : 2 + i),
     });
 
     // Location + Service combinations
     for (const [j, service] of SERVICES.entries()) {
       urls.push({
         loc: `/locations/${location.slug}/${service.slug}/`,
-        priority: isSheffield ? 0.8 : 0.7,
+        priority: isLeicester ? 0.8 : 0.7,
         changefreq: 'monthly',
         lastmod: getStaggeredDate(3 + i + j * 2),
       });

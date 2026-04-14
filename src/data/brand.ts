@@ -20,5 +20,9 @@ export const BRAND = {
   socialProfiles: [
     "https://www.facebook.com/BlockedDrainsLeicester",
     "https://www.instagram.com/blockeddrains_leicester"
-  ]
+  ],
+
+  // Twitter/X handle — set to empty string if no account; twitter:site and twitter:creator
+  // tags are only rendered when this is non-empty.
+  twitterHandle: ""
 };

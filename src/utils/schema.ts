@@ -27,8 +27,8 @@ export function getBaseBusinessSchema() {
     "url": siteUrl,
     "telephone": `+44${BRAND.phone.substring(1)}`,
     "email": BRAND.email,
-    "logo": `${siteUrl}/images/og-default.jpg`,
-    "image": `${siteUrl}/images/og-default.jpg`,
+    "logo": `${siteUrl}/images/og-default.webp`,
+    "image": `${siteUrl}/images/og-default.webp`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
