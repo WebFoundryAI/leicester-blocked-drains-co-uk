@@ -6,9 +6,9 @@ export const BRAND = {
   phone: "01162966163",
   phoneFormatted: "0116 296 6163",
   email: "contactus@leicesterblockeddrains.co.uk",
-  addressLine1: "The Old School House, 65A London Rd",
-  addressLine2: "Oadby",
-  postcode: "LE2 5DN",
+  addressLine1: "11-15 Guildhall Lane",
+  addressLine2: "Leicester",
+  postcode: "LE1 5FQ",
   tagline: "Fast, Reliable Drainage Solutions",
   emergencyAvailable: true,
 

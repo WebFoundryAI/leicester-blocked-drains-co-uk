@@ -32,15 +32,15 @@ export function getBaseBusinessSchema() {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
-      "addressLocality": "Oadby",
+      "addressLocality": "Leicester",
       "addressRegion": "Leicestershire",
       "postalCode": BRAND.postcode,
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 52.5984,
-      "longitude": -1.0879
+      "latitude": 52.6369,
+      "longitude": -1.1398
     },
     "openingHoursSpecification": [
       {
@@ -370,7 +370,7 @@ export function getOrganizationSchema() {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${BRAND.addressLine1}, ${BRAND.addressLine2}`,
-      "addressLocality": "Oadby",
+      "addressLocality": "Leicester",
       "addressRegion": "Leicestershire",
       "postalCode": BRAND.postcode,
       "addressCountry": "GB"
